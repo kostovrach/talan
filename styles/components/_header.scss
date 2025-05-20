@@ -1,4 +1,9 @@
 .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    mix-blend-mode: difference;
     padding: $size-12px 0;
     &__container {
         @include content-width();
@@ -37,7 +42,7 @@
         &-item {
             @include hover-replacement($color-020109, $color-FFFFFF);
             text-transform: uppercase;
-            font-weight: $font-weight;
+            font-weight: $fw-660;
             &--menu {
                 display: flex;
                 align-items: center;
@@ -48,11 +53,15 @@
                     line-height: inherit;
                 }
             }
+            &--icon {
+                rotate: 90deg;
+                pointer-events: none;
+            }
         }
     }
     &__tel {
         @include hover-replacement($color-020109, $color-FFFFFF);
         text-transform: uppercase;
-        font-weight: $font-weight;
+        font-weight: $fw-660;
     }
 }

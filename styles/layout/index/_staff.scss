@@ -1,0 +1,94 @@
+.staff {
+	position: relative;
+	background-color: $color-FFFFFF;
+	color: $color-020109;
+	padding: 4rem 0;
+    padding-bottom: 8rem;
+	&__container {
+		@include content-width();
+		display: grid;
+		grid-template-columns: 40% auto;
+		gap: 2rem;
+	}
+	&__image-wrapper {
+		width: 100%;
+		height: 90vh;
+		@include flex-center();
+		overflow: hidden;
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__body {
+		display: grid;
+		grid-template-rows: auto 25%;
+		justify-content: space-between;
+	}
+	&__titlebox {
+		position: relative;
+	}
+	&__title-container {
+		position: sticky;
+		top: 7%;
+	}
+	&__tag {
+		@include block-tag($color-020109);
+		&-desc {
+			text-transform: uppercase;
+			color: $color-D6D0C6;
+			font-size: $size-12px;
+		}
+	}
+	&__title {
+		font-size: $size-32px;
+		line-height: $size-32px;
+		font-weight: $fw-660;
+		text-wrap: wrap;
+		margin-top: 2rem;
+	}
+	&__text {
+		width: 70%;
+		font-size: $size-14px;
+		line-height: $size-18px;
+	}
+	&__button {
+		@include button($color-020109, $color-1D719D, none, none, inherit, $color-FFFFFF, $color-1D719D);
+		padding: $size-12px $size-32px;
+		margin-top: 2rem;
+		&--icon {
+			bottom: 0.1rem;
+			right: 0.1rem;
+			rotate: 90deg;
+		}
+	}
+	&__fog {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		z-index: 0;
+		pointer-events: none;
+		&-layer {
+			position: absolute;
+			&--1,
+			&--2 {
+				border-radius: 50%;
+				background: linear-gradient(to bottom, rgba($color-FFFFFF, 1) 0%, rgba($color-FFFFFF, 1) 40%, rgba($color-0681CE, 1) 100%);
+				filter: blur(25px);
+			}
+			&--1 {
+				height: 20rem;
+                width: 90%;
+                left: -10rem;
+				bottom: -10rem;
+			}
+			&--2 {
+				height: 10rem;
+                width: 50%;
+				right: -10rem;
+				bottom: -5rem;
+			}
+		}
+	}
+}

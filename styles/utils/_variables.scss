@@ -1,7 +1,10 @@
 // Sizes
+$size-1-25px: 0.078125rem;
+$size-4px: 0.25rem;
+$size-10px: 0.625rem;
 $size-12px: 0.75rem;
 $size-13px: 0.8125rem;
-$size-14px: 0.75rem;
+$size-14px: 0.875rem;
 $size-15px: 0.9375rem;
 $size-16px: 1rem;
 $size-18px: 1.125rem;
@@ -14,17 +17,22 @@ $size-64px: 4rem;
 $size-72px: 4.5rem;
 $size-96px: 6rem;
 $size-128px: 8rem;
+$size-256px: 16rem;
 
 // Colors
 $color-FFFFFF: #FFFFFF;
 $color-D6D0C6: #D6D0C6;
 $color-1D719D: #1D719D;
+$color-0B5DAA: #0B5DAA;
 $color-063968: #063968;
+$color-0681CE: #0681CE;
+$color-00276D: #00276D;
 $color-020109: #020109;
 
 // Typography
 $base-fs: 16px;
 $line-height: 150%;
-$font-weight: 660;
+$fw-660: 660;
+$fw-550: 550;
 
 $duration: 0.5s;
