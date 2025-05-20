@@ -28,7 +28,7 @@
             height: 100%;
             width: 55%;
             border-radius: 2rem;
-            background-color: rgba($color-D6D0C6, 1);
+            background-color: rgba($color-FFFFFF, 1);
             pointer-events: none;
         }
         &-item {
@@ -43,22 +43,86 @@
     &__list {
         counter-reset: item-counter;
         display: grid;
-        grid-auto-rows: 9.625rem;
+        grid-auto-rows: 11.625rem;
     }
     &__item {
         max-width: 100vw;
         height: 100%;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
         padding: 2rem 0;
+        border-top: $size-1px solid rgba($color-D6D0C6, 0.25);
+        opacity: 0.5;
+        transition-duration: $duration;
+        &:last-child {
+            border-bottom: $size-1px solid rgba($color-D6D0C6, 0.25);
+        }
+        & * {
+            pointer-events: none;
+        }
+        &:hover {
+            opacity: 1;
+            & .services__image-wrapper {
+                scale: 1;
+                opacity: 1;
+            }
+            & .services__icon {
+                scale: 1;
+                opacity: 1;
+                translate: 0 0;
+            }
+        }
     }
     &__number {
+        height: fit-content;
         font-size: $size-12px;
         font-weight: $fw-660;
         &::before {
             counter-increment: item-counter;
             content: '0' counter(item-counter);
         }
-
+    }
+    &__name {
+        height: fit-content;
+        font-size: $size-18px;
+        font-weight: $fw-660;
+    }
+    &__desc {
+        height: fit-content;
+        font-size: $size-13px;
+        font-weight: $fw-550;
+    }
+    &__imagebox {
+        position: relative;
+        @include flex-center();
+    }
+    &__image-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        translate: -50% -50%;
+        @include card-effect(12rem, 15rem, 0.25rem, 1rem);
+        scale: 0.5;
+        opacity: 0;
+        transition-duration: $duration;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__icon-wrapper {
+        @include flex-center();
+    }
+    &__icon {
+        display: block;
+        rotate: 45deg;
+        font-size: 1rem;
+        translate: -10rem 0;
+        scale: 0.5;
+        opacity: 0;
+        transition-duration: $duration;
     }
 }

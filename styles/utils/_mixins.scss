@@ -82,10 +82,10 @@
 		border-color: $border-color-hover;
 	}
 }
-@mixin card-effect($max-width, $max-height, $padding, $padding-bottom) {
+@mixin card-effect($width, $height, $padding, $padding-bottom) {
 	display: block;
-	max-width: $max-width;
-	max-height: $max-height;
+	width: $width;
+	height: $height;
 	background-color: $color-FFFFFF;
 	padding: $padding;
 	padding-bottom: $padding-bottom;
