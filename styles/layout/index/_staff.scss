@@ -64,31 +64,6 @@
 		}
 	}
 	&__fog {
-		width: 100%;
-		position: absolute;
-		bottom: 0;
-		z-index: 0;
-		pointer-events: none;
-		&-layer {
-			position: absolute;
-			&--1,
-			&--2 {
-				border-radius: 50%;
-				background: linear-gradient(to bottom, rgba($color-FFFFFF, 1) 0%, rgba($color-FFFFFF, 1) 40%, rgba($color-0681CE, 1) 100%);
-				filter: blur(25px);
-			}
-			&--1 {
-				height: 20rem;
-                width: 90%;
-                left: -10rem;
-				bottom: -10rem;
-			}
-			&--2 {
-				height: 10rem;
-                width: 50%;
-				right: -10rem;
-				bottom: -5rem;
-			}
-		}
+        @include block-fog-border();
 	}
 }
