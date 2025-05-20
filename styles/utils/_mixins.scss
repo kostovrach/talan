@@ -13,7 +13,7 @@
 	@include flex-center();
 	padding: calc($size-12px / 2);
 	overflow: hidden;
-	transition: all $duration ease;
+    transition: transform $duration $cubic-bezier;
 	&::before {
 		content: attr(data-hover-text);
 		position: absolute;
@@ -26,7 +26,7 @@
 		color: $t-color-hover;
 		pointer-events: none;
 		transform: translateY(100%);
-		transition: all $duration ease;
+        transition: transform $duration $cubic-bezier;
 	}
 	&:hover {
 		transform: translateY(0);

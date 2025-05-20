@@ -1,0 +1,41 @@
+.steps {
+    padding: 4rem 0;
+    &__container {
+        @include content-width();
+    }
+    &__title {
+        @include block-title(0);
+    }
+    &__list {
+        counter-reset: item-counter;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-top: 4rem;
+    }
+    &__item {
+        width: 20%;
+        text-wrap: wrap;
+        &-number {
+            counter-increment: item-counter;
+            font-size: $size-14px;
+            font-weight: $fw-550;
+            &::before {
+                content: "(0" counter(item-counter) ")";
+            }
+        }
+        &-title {
+            text-transform: uppercase;
+            font-size: $size-14px;
+            font-weight: $fw-660;
+            margin-top: 2rem;
+        }
+        &-text {
+            font-size: $size-13px;
+            line-height: $size-18px;
+            font-weight: $fw-550;
+            margin-top: 1rem;
+            opacity: 0.5;
+        }
+    }
+}
