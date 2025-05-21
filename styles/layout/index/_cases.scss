@@ -1,0 +1,212 @@
+.cases {
+	padding: 4rem 0;
+	&__container {
+		@include content-width();
+		display: grid;
+		grid-template-columns: 40% auto;
+		gap: 2rem;
+	}
+	&__mapbox {
+		position: relative;
+		height: 100%;
+	}
+	&__map {
+		position: sticky;
+		top: 0;
+		height: 100vh;
+        font-family: "Inter", sans-serif;
+        filter: saturate(0%) invert(92%);
+		&-marker {
+            cursor: pointer;
+			width: 32px;
+			height: 32px;
+			background: white;
+			color: black;
+			font-size: $size-12px;
+            font-weight: $fw-660;
+			border-radius: 50%;
+			border: 2px solid black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+            filter: invert(100%);
+			//box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+		}
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	&__titlebox {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	&__title {
+		text-transform: lowercase;
+		font-size: $size-96px;
+		font-weight: $fw-900;
+	}
+	&__desc {
+		font-size: $size-14px;
+		opacity: 0.8;
+	}
+	&__filter {
+		&-title {
+			grid-column: span 2;
+			text-transform: uppercase;
+			font-size: $size-14px;
+			font-weight: $fw-750;
+			margin-top: 2rem;
+		}
+		&-container {
+			grid-column: span 2;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+			margin-top: 1rem;
+		}
+		&-item {
+			@include button($color-FFFFFF, $color-1D719D, none, none, inherit, $color-FFFFFF, $color-1D719D);
+			text-transform: none;
+			font-size: $size-13px;
+			font-weight: $fw-550;
+			padding: 0.5rem 1.5rem;
+			display: flex;
+			align-items: center;
+			gap: $size-10px;
+			&::after {
+				background-color: $color-FFFFFF;
+				top: auto;
+				bottom: 0;
+			}
+			&::before {
+				content: "";
+				display: block;
+				width: 0.5rem;
+				height: 0.5rem;
+				background-color: $color-FFFFFF;
+				border-radius: 50%;
+				transition-duration: $duration;
+			}
+			&.active {
+				pointer-events: none;
+				background-color: $color-FFFFFF;
+				color: $color-020109;
+				border-color: $color-FFFFFF;
+				&::before {
+					background-color: $color-020109;
+				}
+				&::after {
+					background-color: $color-FFFFFF;
+				}
+			}
+		}
+	}
+	&__body {
+		margin-top: 8rem;
+	}
+	&__item {
+		display: grid;
+		grid-template-columns: 40% auto;
+		gap: 1rem;
+		padding: 1rem 0;
+		border-top: $size-1px solid rgba($color-D6D0C6, 0.25);
+		&:last-child {
+			border-bottom: $size-1px solid rgba($color-D6D0C6, 0.25);
+		}
+		&:hover .cases__item-image {
+			scale: 1.1;
+		}
+		&-imagebox {
+			aspect-ratio: 1.5/1;
+			overflow: hidden;
+		}
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition-duration: $duration;
+		}
+		&-contentbox {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		&-tagbox {
+			display: flex;
+			flex-direction: column;
+		}
+		&-tag {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			font-size: $size-13px;
+			font-weight: $fw-550;
+			opacity: 0.3;
+			&::before {
+				content: "";
+				display: block;
+				width: 0.5rem;
+				height: 0.5rem;
+				background-color: $color-FFFFFF;
+				border-radius: 50%;
+				transition-duration: $duration;
+			}
+		}
+		&-title {
+			text-transform: uppercase;
+			text-wrap: wrap;
+			font-size: $size-14px;
+			font-weight: $fw-750;
+		}
+		&-desc {
+			font-size: $size-13px;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			line-clamp: 2;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			opacity: 0.58;
+			margin-top: 0.5rem;
+		}
+		&-button {
+			font-size: $size-13px;
+			font-weight: $fw-550;
+			display: flex;
+			align-items: center;
+			gap: 0.25rem;
+			transition-duration: $duration;
+			&--icon {
+				pointer-events: none;
+				rotate: 45deg;
+				scale: 0.6;
+			}
+			&:hover {
+				translate: 10% 0;
+				opacity: 0.8;
+			}
+		}
+	}
+	&__link {
+		@include button($color-FFFFFF, $color-1D719D, none, none, inherit, $color-FFFFFF, $color-1D719D);
+		@include flex-center();
+		width: 100%;
+		padding: $size-12px 0;
+		font-weight: $fw-660;
+		&--icon {
+			bottom: 0.1rem;
+			right: 0.1rem;
+			rotate: 90deg;
+		}
+		&::after {
+			background-color: $color-FFFFFF;
+			top: auto;
+			bottom: 0;
+		}
+		&:hover::after {
+			scale: 105;
+		}
+	}
+}

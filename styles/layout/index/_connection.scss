@@ -1,0 +1,22 @@
+.connection {
+    padding: 10rem 0;
+    &__container {
+        @include content-width();
+    }
+    &__title {
+        @include fs-text();
+        text-wrap: nowrap;
+    }
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        &-item {
+            @include hover-replacement($color-020109, $color-FFFFFF);
+            text-transform: uppercase;
+            font-size: $size-12px;
+            line-height: $size-12px;
+            font-weight: $fw-660;
+        }
+    }
+}

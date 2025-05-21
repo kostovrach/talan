@@ -8,6 +8,14 @@
 	align-items: center;
 	justify-content: center;
 }
+@mixin fs-text() {
+	font-size: clamp($size-48px, 13vw, calc($size-128px * 1.4));
+    line-height: clamp($size-48px, 13vw, calc($size-128px * 1.4));
+    text-transform: lowercase;
+    font-weight: $fw-750;
+    display: flex;
+    justify-content: center;
+}
 @mixin hover-replacement($t-color-hover, $bg-color-hover) {
 	position: relative;
 	@include flex-center();
@@ -36,6 +44,7 @@
 	}
 }
 @mixin button($border-color, $border-color-hover, $bg-color, $bg-color-hover, $t-color, $t-color-hover, $before-bg) {
+	cursor: pointer;
 	position: relative;
 	overflow: hidden;
 	display: block;
@@ -55,7 +64,7 @@
 		position: absolute;
 		scale: 0.7;
 	}
-	&::before {
+	&::after {
 		content: "";
 		position: absolute;
 		z-index: -1;
@@ -69,8 +78,8 @@
 		transition-duration: 0.6s;
 		animation-timing-function: ease-out;
 	}
-	&:hover::before,
-	&:focus::before {
+	&:hover::after,
+	&:focus::after {
 		scale: 56;
 		background: $before-bg;
 	}

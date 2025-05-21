@@ -127,8 +127,8 @@
 						<h2 class="services__tag">Услуги</h2>
 						<h3 class="services__title">Мы оказываем высококвалифицированные услуги в&nbsp;наиболее проблемных областях права</h3>
 						<ul class="services__switcher">
-							<li class="services__switcher-item active" data-type="juridical">Юридические лица</li>
-							<li class="services__switcher-item" data-type="physical">Физические лица</li>
+							<li class="services__switcher-item active" data-type="juridical" tabindex="0" role="button">Юридические лица</li>
+							<li class="services__switcher-item" data-type="physical" tabindex="0" role="button">Физические лица</li>
 							<li class="services__switcher-indicator"></li>
 						</ul>
 					</div>
@@ -347,7 +347,167 @@
 					</div>
 				</div>
 			</section>
+			<section class="cases">
+				<div class="cases__container">
+					<div class="cases__mapbox">
+						<div id="map" class="cases__map"></div>
+					</div>
+					<div class="cases__body">
+						<div class="cases__titlebox">
+							<h2 class="cases__title">Кейсы</h2>
+							<p class="cases__desc">Нашими клиентами стали 2500+ компаний из 42 городов России и стран СНГ</p>
+							<div class="cases__filter-title">Фильтры</div>
+							<ul class="cases__filter-container">
+								<li class="cases__filter-item" tabindex="0" role="button" data-type="administrative">Административные иски</li>
+								<li class="cases__filter-item" tabindex="0" role="button" data-type="antimonopoly">Антимонопольное регулирование</li>
+								<li class="cases__filter-item" tabindex="0" role="button" data-type="contracts">Договоры</li>
+								<li class="cases__filter-item" tabindex="0" role="button" data-type="patent">Патенты</li>
+								<li class="cases__filter-item" tabindex="0" role="button" data-type="compliance">Комплаенс</li>
+								<li class="cases__filter-item" tabindex="0" role="button" data-type="taxes">Налоги</li>
+								<li class="cases__filter-item" tabindex="0" role="button" data-type="criminal">Уголовные дела</li>
+								<li class="cases__filter-item" tabindex="0" role="button" data-type="employment">Трудовые отношения</li>
+							</ul>
+						</div>
+						<ul class="cases__list">
+							<li class="cases__item" data-type="administrative criminal antimonopoly" data-location="samara">
+								<picture class="cases__item-imagebox">
+									<img class="cases__item-image" src="./media/content/img/cases/case1.jpg" alt="#">
+								</picture>
+								<div class="cases__item-contentbox">
+									<div class="cases__item-tagbox">
+										<span class="cases__item-tag">Административное право</span>
+									</div>
+									<div class="cases__item-titlebox">
+										<h3 class="cases__item-title">Доказательство наличия долга для возврата займа в МФО</h3>
+										<p class="cases__item-desc">Бюро TALAN провело детальный аудит налоговых расходов компании и разработало стратегию оптимизации, позволив снизить налоговую нагрузку на 30%. Благодаря оперативным и грамотным решениям клиент смог существенно повысить финансовую стабильность и сосредоточиться на развитии бизнеса.</p>
+									</div>
+									<a class="cases__item-button" href="./pages">Подробнее <i class="cases__item-button--icon icon-arrow"></i></a>
+								</div>
+							</li>
+							<li class="cases__item" data-type="administrative taxes antimonopoly" data-location="saratov">
+								<picture class="cases__item-imagebox">
+									<img class="cases__item-image" src="./media/content/img/cases/case2.jpg" alt="#">
+								</picture>
+								<div class="cases__item-contentbox">
+									<div class="cases__item-tagbox">
+										<span class="cases__item-tag">Административное право</span>
+										<span class="cases__item-tag">Налоговое право</span>
+									</div>
+									<div class="cases__item-titlebox">
+										<h3 class="cases__item-title">Налоговый спор крупного бизнеса</h3>
+										<p class="cases__item-desc">Бюро TALAN провело детальный аудит налоговых расходов компании и разработало стратегию оптимизации, позволив снизить налоговую нагрузку на 30%. Благодаря оперативным и грамотным решениям клиент смог существенно повысить финансовую стабильность и сосредоточиться на развитии бизнеса.</p>
+									</div>
+									<a class="cases__item-button" href="./pages">Подробнее <i class="cases__item-button--icon icon-arrow"></i></a>
+								</div>
+							</li>
+							<li class="cases__item" data-type="administrative contracts antimonopoly" data-location="moscow">
+								<picture class="cases__item-imagebox">
+									<img class="cases__item-image" src="./media/content/img/cases/case3.jpg" alt="#">
+								</picture>
+								<div class="cases__item-contentbox">
+									<div class="cases__item-tagbox">
+										<span class="cases__item-tag">Административное право</span>
+									</div>
+									<div class="cases__item-titlebox">
+										<h3 class="cases__item-title">Налоговый спор крупного бизнеса</h3>
+										<p class="cases__item-desc">Бюро TALAN провело детальный аудит налоговых расходов компании и разработало стратегию оптимизации, позволив снизить налоговую нагрузку на 30%. Благодаря оперативным и грамотным решениям клиент смог существенно повысить финансовую стабильность и сосредоточиться на развитии бизнеса.</p>
+									</div>
+									<a class="cases__item-button" href="./pages">Подробнее <i class="cases__item-button--icon icon-arrow"></i></a>
+								</div>
+							</li>
+							<li class="cases__item" data-type="administrative compliance patent" data-location="gomel">
+								<picture class="cases__item-imagebox">
+									<img class="cases__item-image" src="./media/content/img/cases/case4.jpg" alt="#">
+								</picture>
+								<div class="cases__item-contentbox">
+									<div class="cases__item-tagbox">
+										<span class="cases__item-tag">Административное право</span>
+									</div>
+									<div class="cases__item-titlebox">
+										<h3 class="cases__item-title">Оспаривание отцовства в судебном порядке</h3>
+										<p class="cases__item-desc">Бюро TALAN провело детальный аудит налоговых расходов компании и разработало стратегию оптимизации, позволив снизить налоговую нагрузку на 30%. Благодаря оперативным и грамотным решениям клиент смог существенно повысить финансовую стабильность и сосредоточиться на развитии бизнеса.</p>
+									</div>
+									<a class="cases__item-button" href="./pages">Подробнее <i class="cases__item-button--icon icon-arrow"></i></a>
+								</div>
+							</li>
+							<li class="cases__item" data-type="administrative taxes criminal" data-location="astana">
+								<picture class="cases__item-imagebox">
+									<img class="cases__item-image" src="./media/content/img/cases/case5.jpg" alt="#">
+								</picture>
+								<div class="cases__item-contentbox">
+									<div class="cases__item-tagbox">
+										<span class="cases__item-tag">Налоги</span>
+									</div>
+									<div class="cases__item-titlebox">
+										<h3 class="cases__item-title">Налоговый спор крупного бизнеса</h3>
+										<p class="cases__item-desc">Бюро TALAN провело детальный аудит налоговых расходов компании и разработало стратегию оптимизации, позволив снизить налоговую нагрузку на 30%. Благодаря оперативным и грамотным решениям клиент смог существенно повысить финансовую стабильность и сосредоточиться на развитии бизнеса.</p>
+									</div>
+									<a class="cases__item-button" href="./pages">Подробнее <i class="cases__item-button--icon icon-arrow"></i></a>
+								</div>
+							</li>
+							<li class="cases__item" data-type="administrative employment contracts" data-location="saint_petersburg">
+								<picture class="cases__item-imagebox">
+									<img class="cases__item-image" src="./media/content/img/cases/case6.jpg" alt="#">
+								</picture>
+								<div class="cases__item-contentbox">
+									<div class="cases__item-tagbox">
+										<span class="cases__item-tag">Трудовые отношения</span>
+										<span class="cases__item-tag">Патенты</span>
+									</div>
+									<div class="cases__item-titlebox">
+										<h3 class="cases__item-title">Налоговый спор крупного бизнеса</h3>
+										<p class="cases__item-desc">Бюро TALAN провело детальный аудит налоговых расходов компании и разработало стратегию оптимизации, позволив снизить налоговую нагрузку на 30%. Благодаря оперативным и грамотным решениям клиент смог существенно повысить финансовую стабильность и сосредоточиться на развитии бизнеса.</p>
+									</div>
+									<a class="cases__item-button" href="./pages">Подробнее <i class="cases__item-button--icon icon-arrow"></i></a>
+								</div>
+							</li>
+						</ul>
+						<a class="cases__link" href="./pages/">Все кейсы<i class="cases__link--icon icon-arrow"></i></a>
+					</div>
+				</div>
+			</section>
+			<section class="connection">
+				<div class="connection__container">
+					<div class="connection__titlebox">
+						<h2 class="connection__title">Будем на связи</h2>
+						<ul class="connection__links">
+							<li><a class="connection__links-item" data-hover-text="vk" target="_blank" href="https://vk.com">vk</a></li>
+							<li><a class="connection__links-item" data-hover-text="telegram" target="_blank" href="https://web.telegram.org">telegram</a></li>
+							<li><a class="connection__links-item" data-hover-text="tik tok" target="_blank" href="https://www.tiktok.com">tik tok</a></li>
+							<li><a class="connection__links-item" data-hover-text="hello@talan.ru" target="_blank" href="mailto:hello@talan.ru">hello@talan.ru</a></li>
+							<li><a class="connection__links-item" data-hover-text="+7 (999) 987-65-43" target="_blank" href="tel:+79999876543">+7 (999) 987-65-43</a></li>
+						</ul>
+					</div>
+					<form class="connection__form" action="">
+						<div class="connection__inputbox">
+							<input id="" class="connection__input" type="text" required>
+							<input id="" class="connection__input" type="tel" required>
+							<div class="connection__input connection__select">
+								<input id="" class="connection__select-input" type="text">
+								<i class="connection__select-icon icon-check-mark"></i>
+								<ul class="connection__select-dropdown">
+									<li class="connection__select-item">Административное право</li>
+									<li class="connection__select-item">Антимонопольное право</li>
+									<li class="connection__select-item">Интеллектуальная собственность</li>
+									<li class="connection__select-item">Корпоративное право</li>
+									<li class="connection__select-item">Международные споры</li>
+									<li class="connection__select-item">Налоговое право</li>
+									<li class="connection__select-item">Семейные споры</li>
+									<li class="connection__select-item">Трудовое право</li>
+									<li class="connection__select-item">Финансы</li>
+								</ul>
+							</div>
+							<textarea id="" class="connection__input connection__input--custom" name=""></textarea>
+						</div>
+						<p class="connection__footnote">Отправляя запрос, вы соглашаетесь с <a class="connection__footnote-link" href="./pages/">политикой конфиденциальности</a></p>
+						<button class="connection__button" type="submit">Отправить запрос<i class="connection__button icon-arrow"></i></button>
+					</form>
+				</div>
+			</section>
 		</main>
+		<script src="./js/libs/leaflet.js"></script>
 		<script src="./js/pages/index/servicesSwitcher.js"></script>
+		<script src="./js/pages/index/casesFilter.js"></script>
+		<script src="./js/pages/index/casesMap.js"></script>
 	</body>
 </html>
