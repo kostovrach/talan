@@ -10,18 +10,18 @@
 }
 @mixin fs-text() {
 	font-size: clamp($size-48px, 13vw, calc($size-128px * 1.4));
-    line-height: clamp($size-48px, 13vw, calc($size-128px * 1.4));
-    text-transform: lowercase;
-    font-weight: $fw-750;
-    display: flex;
-    justify-content: center;
+	line-height: clamp($size-48px, 13vw, calc($size-128px * 1.4));
+	text-transform: lowercase;
+	font-weight: $fw-750;
+	display: flex;
+	justify-content: center;
 }
 @mixin hover-replacement($t-color-hover, $bg-color-hover) {
 	position: relative;
 	@include flex-center();
 	padding: calc($size-12px / 2);
 	overflow: hidden;
-    transition: transform $duration $cubic-bezier;
+	transition: transform $duration $spring;
 	&::before {
 		content: attr(data-hover-text);
 		@include flex-center();
@@ -34,13 +34,38 @@
 		color: $t-color-hover;
 		pointer-events: none;
 		transform: translateY(100%);
-        transition: transform $duration $cubic-bezier;
+		transition: transform $duration $spring;
 	}
 	&:hover,
 	&:focus {
 		transform: translateY(0);
 		&::before {
 			transform: translateY(0);
+		}
+	}
+}
+@mixin hover-translate($hover-text-color, $before-bg: $color-1D719D) {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	width: fit-content;
+	transition: $duration $spring;
+	&::before {
+		content: "";
+		display: block;
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 50%;
+		background-color: $before-bg;
+		scale: 0;
+		transition: $duration $spring;
+	}
+	&:hover,
+	&:focus {
+		color: $hover-text-color;
+		translate: 1rem 0;
+		&::before {
+			scale: 1;
 		}
 	}
 }
@@ -118,10 +143,10 @@
 	}
 }
 @mixin block-title($margin-top: 2rem) {
-    font-size: $size-48px;
-    line-height: $size-48px;
-    font-weight: $fw-660;
-    margin-top: $margin-top;
+	font-size: $size-48px;
+	line-height: $size-48px;
+	font-weight: $fw-660;
+	margin-top: $margin-top;
 }
 @mixin block-fog-border() {
 	width: 100%;
@@ -148,6 +173,30 @@
 			width: 50%;
 			right: -10rem;
 			bottom: -5rem;
+		}
+	}
+}
+@mixin block-fog-bg() {
+	pointer-events: none;
+	&-layer {
+		position: absolute;
+		z-index: -1;
+		&--1,
+		&--2 {
+			border-radius: 50%;
+			aspect-ratio: 1/1;
+			background: radial-gradient(rgba($color-0681CE, 0.7) 0%, rgba($color-00276D, 1) 100%);
+			filter: blur(200px);
+		}
+		&--1 {
+			height: 50rem;
+			left: 40%;
+			top: 10%;
+		}
+		&--2 {
+			height: 30rem;
+			left: 20%;
+			top: 40%;
 		}
 	}
 }

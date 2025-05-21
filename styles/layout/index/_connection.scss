@@ -84,28 +84,6 @@
 		}
 	}
 	&__fog {
-		pointer-events: none;
-		&-layer {
-			position: absolute;
-		    z-index: -1;
-			&--1,
-			&--2 {
-				border-radius: 50%;
-				background: radial-gradient( rgba($color-0681CE, 0.7) 0%, rgba($color-00276D, 1) 100%);
-				filter: blur(200px);
-			}
-			&--1 {
-				height: 50rem;
-                aspect-ratio: 1/1;
-				left: 40%;
-				top: 10%;
-			}
-			&--2 {
-				height: 30rem;
-                aspect-ratio: 1/1;
-				left: 20%;
-				top: 40%;
-			}
-		}
+        @include block-fog-bg();
 	}
 }

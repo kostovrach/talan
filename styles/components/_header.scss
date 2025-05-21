@@ -1,67 +1,62 @@
 .header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    mix-blend-mode: difference;
-    padding: $size-12px 0;
-    &__container {
-        @include content-width();
-        font-size: $size-12px;
-        line-height: $size-12px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    &__logo-wrapper {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        &:hover .header__logo {
-            fill: $color-FFFFFF;
-        }
-    }
-    &__logo {
-        pointer-events: none;
-        width: 2.25rem;
-        height: 1.5rem;
-        transition-duration: $duration;
-    }
-    &__nav {
-        @supports(display: contents) {
-            display: contents;
-        }
-        &-container {
-            display: flex;
-            align-items: center;
-            gap: $size-64px;
-            @supports(display: contents) {
-                display: contents;
-            }
-        }
-        &-item {
-            @include hover-replacement($color-020109, $color-FFFFFF);
-            text-transform: uppercase;
-            font-weight: $fw-660;
-            &--menu {
-                display: flex;
-                align-items: center;
-                gap: 0.25rem;
-                & button {
-                    text-transform: uppercase;
-                    font-weight: inherit;
-                    line-height: inherit;
-                }
-            }
-            &--icon {
-                rotate: 90deg;
-                pointer-events: none;
-            }
-        }
-    }
-    &__tel {
-        @include hover-replacement($color-020109, $color-FFFFFF);
-        text-transform: uppercase;
-        font-weight: $fw-660;
-    }
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 3;
+	mix-blend-mode: difference;
+	padding: $size-12px 0;
+	&__container {
+		@include content-width();
+		font-size: $size-12px;
+		line-height: $size-12px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo-wrapper {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		&:hover .header__logo {
+			fill: $color-FFFFFF;
+		}
+	}
+	&__logo {
+		pointer-events: none;
+		width: 2.25rem;
+		height: 1.5rem;
+		transition-duration: $duration;
+	}
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: $size-64px;
+		@supports (display: contents) {
+			display: contents;
+		}
+		&-item {
+			@include hover-replacement($color-020109, $color-FFFFFF);
+			text-transform: uppercase;
+			font-weight: $fw-660;
+			&--menu {
+				display: flex;
+				align-items: center;
+				gap: 0.25rem;
+				& button {
+					text-transform: uppercase;
+					font-weight: inherit;
+					line-height: inherit;
+				}
+			}
+			&--icon {
+				rotate: 90deg;
+				pointer-events: none;
+			}
+		}
+	}
+	&__tel {
+		@include hover-replacement($color-020109, $color-FFFFFF);
+		text-transform: uppercase;
+		font-weight: $fw-660;
+	}
 }

@@ -18,15 +18,13 @@
 						</g>
 					</svg>
 				</a>
-				<nav class="header__nav">
-					<ul class="header__nav-container">
-						<li class="header__nav-item" data-hover-text="О компании"><a href="./pages/">о Компании</a></li>
-						<li class="header__nav-item header__nav-item--menu" data-hover-text="Услуги"><button data-services-open>Услуги</button><i class="header__nav-item--icon icon-check-mark"></i></li>
-						<li class="header__nav-item" data-hover-text="Новости"><a href="./pages/">Новости</a></li>
-						<li class="header__nav-item" data-hover-text="Кейсы"><a href="./pages/">Кейсы</a></li>
-						<li class="header__nav-item" data-hover-text="Контакты"><a href="./pages/">Контакты</a></li>
-					</ul>
-				</nav>
+				<ul class="header__nav" role="navigation">
+					<li class="header__nav-item" data-hover-text="О компании"><a href="./pages/">о Компании</a></li>
+					<li class="header__nav-item header__nav-item--menu" data-hover-text="Услуги"><button data-services-open>Услуги</button><i class="header__nav-item--icon icon-check-mark"></i></li>
+					<li class="header__nav-item" data-hover-text="Новости"><a href="./pages/">Новости</a></li>
+					<li class="header__nav-item" data-hover-text="Кейсы"><a href="./pages/">Кейсы</a></li>
+					<li class="header__nav-item" data-hover-text="Контакты"><a href="./pages/">Контакты</a></li>
+				</ul>
 				<a class="header__tel" href="tel:+78465553535" data-hover-text="Заказать звонок">8 (846) 555-35-35</a>
 			</div>
 		</header>
@@ -371,7 +369,7 @@
 						<ul class="cases__list">
 							<li class="cases__item" data-type="administrative criminal antimonopoly" data-location="samara">
 								<picture class="cases__item-imagebox">
-									<img class="cases__item-image" src="./media/content/img/cases/case1.jpg" alt="#">
+									<img class="cases__item-image" src="./media/content/img/cases/case1.jpg" alt="#" />
 								</picture>
 								<div class="cases__item-contentbox">
 									<div class="cases__item-tagbox">
@@ -386,7 +384,7 @@
 							</li>
 							<li class="cases__item" data-type="administrative taxes antimonopoly" data-location="saratov">
 								<picture class="cases__item-imagebox">
-									<img class="cases__item-image" src="./media/content/img/cases/case2.jpg" alt="#">
+									<img class="cases__item-image" src="./media/content/img/cases/case2.jpg" alt="#" />
 								</picture>
 								<div class="cases__item-contentbox">
 									<div class="cases__item-tagbox">
@@ -402,7 +400,7 @@
 							</li>
 							<li class="cases__item" data-type="administrative contracts antimonopoly" data-location="moscow">
 								<picture class="cases__item-imagebox">
-									<img class="cases__item-image" src="./media/content/img/cases/case3.jpg" alt="#">
+									<img class="cases__item-image" src="./media/content/img/cases/case3.jpg" alt="#" />
 								</picture>
 								<div class="cases__item-contentbox">
 									<div class="cases__item-tagbox">
@@ -417,7 +415,7 @@
 							</li>
 							<li class="cases__item" data-type="administrative compliance patent" data-location="gomel">
 								<picture class="cases__item-imagebox">
-									<img class="cases__item-image" src="./media/content/img/cases/case4.jpg" alt="#">
+									<img class="cases__item-image" src="./media/content/img/cases/case4.jpg" alt="#" />
 								</picture>
 								<div class="cases__item-contentbox">
 									<div class="cases__item-tagbox">
@@ -432,7 +430,7 @@
 							</li>
 							<li class="cases__item" data-type="administrative taxes criminal" data-location="astana">
 								<picture class="cases__item-imagebox">
-									<img class="cases__item-image" src="./media/content/img/cases/case5.jpg" alt="#">
+									<img class="cases__item-image" src="./media/content/img/cases/case5.jpg" alt="#" />
 								</picture>
 								<div class="cases__item-contentbox">
 									<div class="cases__item-tagbox">
@@ -447,7 +445,7 @@
 							</li>
 							<li class="cases__item" data-type="administrative employment contracts" data-location="saint_petersburg">
 								<picture class="cases__item-imagebox">
-									<img class="cases__item-image" src="./media/content/img/cases/case6.jpg" alt="#">
+									<img class="cases__item-image" src="./media/content/img/cases/case6.jpg" alt="#" />
 								</picture>
 								<div class="cases__item-contentbox">
 									<div class="cases__item-tagbox">
@@ -481,13 +479,13 @@
 					<form class="connection__form" action="">
 						<div class="connection__inputbox">
 							<div class="connection__input-wrapper">
-								<input id="" class="connection__input" type="text" required placeholder="Ваше имя">
+								<input id="" class="connection__input" type="text" required placeholder="Ваше имя" />
 							</div>
 							<div class="connection__input-wrapper">
-								<input id="input-tel" class="connection__input" type="tel" required placeholder="Номер телефона">
+								<input id="input-tel" class="connection__input" type="tel" required placeholder="Номер телефона" />
 							</div>
 							<div class="connection__input connection__select">
-								<input id="" class="connection__select-input" type="text">
+								<input id="" class="connection__select-input" type="text" />
 								<i class="connection__select-icon icon-check-mark"></i>
 								<ul class="connection__select-dropdown">
 									<li class="connection__select-item">Административное право</li>
@@ -515,6 +513,44 @@
 				</div>
 			</section>
 		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<a href="./index.html">
+						<picture class="footer__logo">
+							<source srcset="./media/services/logo-fill.svg" media="(max-width: 1100px)" />
+							<img src="./media/services/logo-full.png" alt="#" />
+						</picture>
+					</a>
+					<ul class="footer__nav" role="navigation">
+						<li class="footer__nav-item"><a href="./pages/">О Компании</a></li>
+						<li class="footer__nav-item"><a href="./pages/">Услуги</a></li>
+						<li class="footer__nav-item"><a href="./pages/">Новости</a></li>
+						<li class="footer__nav-item"><a href="./pages/">Кейсы</a></li>
+						<li class="footer__nav-item"><a href="./pages/">Конструктор документов</a></li>
+						<li class="footer__nav-item"><a href="./pages/">Контакты</a></li>
+					</ul>
+					<ul class="footer__connection">
+						<li class="footer__connection-item">
+							<i class="footer__connection-item--icon icon-tel"></i>
+							<a href="tel:+78465553535">8 (846) 555-35-35</a>
+						</li>
+						<li class="footer__connection-item">
+							<i class="footer__connection-item--icon icon-mail"></i>
+							<a href="mailto:hello@talan.ru" target="_blank">hello@talan.ru</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__info">
+					<div class="footer__privacy">TALAN &copy; 2025. Все права защищены</div>
+					<ul class="footer__linksbox">
+						<li class="footer__link"><a href="./pages/">Реквизиты</a></li>
+						<li class="footer__link"><a href="./pages/">Политика конфиденциальности</a></li>
+					</ul>
+					<a href="https://intheplace.ru" class="footer__dev-label">Разработано<img src="./media/services/label.svg" alt="ThePlace" /></a>
+				</div>
+			</div>
+		</footer>
 		<script src="./js/libs/leaflet.js"></script>
 		<script src="./js/components/numberMask.js"></script>
 		<script src="./js/pages/index/servicesSwitcher.js"></script>
