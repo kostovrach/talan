@@ -30,7 +30,6 @@
 			justify-content: center;
 			align-items: center;
             filter: invert(100%);
-			//box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 		}
 	}
 	&__body {
@@ -205,7 +204,8 @@
 			top: auto;
 			bottom: 0;
 		}
-		&:hover::after {
+		&:hover::after,
+        &:focus::after {
 			scale: 105;
 		}
 	}

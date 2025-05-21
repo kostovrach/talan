@@ -480,8 +480,12 @@
 					</div>
 					<form class="connection__form" action="">
 						<div class="connection__inputbox">
-							<input id="" class="connection__input" type="text" required>
-							<input id="" class="connection__input" type="tel" required>
+							<div class="connection__input-wrapper">
+								<input id="" class="connection__input" type="text" required placeholder="Ваше имя">
+							</div>
+							<div class="connection__input-wrapper">
+								<input id="input-tel" class="connection__input" type="tel" required placeholder="Номер телефона">
+							</div>
 							<div class="connection__input connection__select">
 								<input id="" class="connection__select-input" type="text">
 								<i class="connection__select-icon icon-check-mark"></i>
@@ -497,15 +501,22 @@
 									<li class="connection__select-item">Финансы</li>
 								</ul>
 							</div>
-							<textarea id="" class="connection__input connection__input--custom" name=""></textarea>
+							<div class="connection__inputr connection__input-wrapper--custom">
+								<textarea id="" class="connection__input connection__input--custom" name="" placeholder="Опишите задачу (не обязательно)"></textarea>
+							</div>
 						</div>
 						<p class="connection__footnote">Отправляя запрос, вы соглашаетесь с <a class="connection__footnote-link" href="./pages/">политикой конфиденциальности</a></p>
-						<button class="connection__button" type="submit">Отправить запрос<i class="connection__button icon-arrow"></i></button>
+						<button class="connection__button" type="submit">Отправить запрос<i class="connection__button--icon icon-arrow"></i></button>
 					</form>
+				</div>
+				<div class="connection__fog">
+					<div class="connection__fog-layer connection__fog-layer--1"></div>
+					<div class="connection__fog-layer connection__fog-layer--2"></div>
 				</div>
 			</section>
 		</main>
 		<script src="./js/libs/leaflet.js"></script>
+		<script src="./js/components/numberMask.js"></script>
 		<script src="./js/pages/index/servicesSwitcher.js"></script>
 		<script src="./js/pages/index/casesFilter.js"></script>
 		<script src="./js/pages/index/casesMap.js"></script>

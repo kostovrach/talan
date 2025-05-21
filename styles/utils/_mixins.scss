@@ -24,19 +24,20 @@
     transition: transform $duration $cubic-bezier;
 	&::before {
 		content: attr(data-hover-text);
+		@include flex-center();
 		position: absolute;
 		z-index: 2;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		@include flex-center();
 		background-color: $bg-color-hover;
 		color: $t-color-hover;
 		pointer-events: none;
 		transform: translateY(100%);
         transition: transform $duration $cubic-bezier;
 	}
-	&:hover {
+	&:hover,
+	&:focus {
 		transform: translateY(0);
 		&::before {
 			transform: translateY(0);
