@@ -1,5 +1,5 @@
 .connection {
-    position: relative;
+	position: relative;
 	padding: 10rem 0;
 	&__container {
 		@include content-width();
@@ -60,6 +60,58 @@
 		}
 	}
 	&__select {
+		cursor: pointer;
+		position: relative;
+		user-select: none;
+		&-input {
+			pointer-events: none;
+		}
+		&-icon {
+			position: absolute;
+			right: 16px;
+			top: 50%;
+			transform: translateY(-50%) rotate(90deg);
+			transition: transform 0.3s ease;
+			pointer-events: none;
+		}
+
+		&.open .connection__select-icon {
+			transform: translateY(-50%) rotate(-90deg);
+		}
+
+		&-dropdown {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			font-size: $size-14px;
+			max-height: 0;
+			visibility: hidden;
+			pointer-events: none;
+			overflow-y: auto;
+			backdrop-filter: blur(8px);
+			-webkit-backdrop-filter: blur(8px);
+			background-color: rgba($color-FFFFFF, 0.02);
+			border: rgba($color-D6D0C6, 0.1) solid $size-1-25px;
+			transition-duration: calc($duration / 2);
+
+			.connection__select.open & {
+				max-height: $size-256px;
+				visibility: visible;
+				pointer-events: auto;
+			}
+		}
+
+		&-item {
+			cursor: pointer;
+			padding: 1rem 2rem;
+			border: rgba($color-D6D0C6, 0) solid $size-1-25px;
+			transition: calc($duration / 2);
+			&:hover {
+				border: rgba($color-D6D0C6, 0.2) solid $size-1-25px;
+			}
+		}
 	}
 	&__footnote {
 		font-size: $size-12px;
@@ -79,11 +131,11 @@
 			top: 0.1rem;
 		}
 		&:hover::after,
-        &:focus::after {
+		&:focus::after {
 			scale: 180;
 		}
 	}
 	&__fog {
-        @include block-fog-bg();
+		@include block-fog-bg();
 	}
 }

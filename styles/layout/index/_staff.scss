@@ -24,6 +24,7 @@
 	&__body {
 		display: grid;
 		grid-template-rows: auto 25%;
+		gap: 2rem;
 		justify-content: space-between;
 	}
 	&__titlebox {

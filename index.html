@@ -479,28 +479,29 @@
 					<form class="connection__form" action="">
 						<div class="connection__inputbox">
 							<div class="connection__input-wrapper">
-								<input id="" class="connection__input" type="text" required placeholder="Ваше имя" />
+								<input id="input-name" class="connection__input" type="text" required placeholder="Ваше имя" />
 							</div>
 							<div class="connection__input-wrapper">
 								<input id="input-tel" class="connection__input" type="tel" required placeholder="Номер телефона" />
 							</div>
-							<div class="connection__input connection__select">
-								<input id="" class="connection__select-input" type="text" />
+							<div class="connection__select" tabindex="0">
+								<input id="input-service" class="connection__input connection__select-input" type="text" placeholder="Услуга (опционально)" readonly />
 								<i class="connection__select-icon icon-check-mark"></i>
 								<ul class="connection__select-dropdown">
-									<li class="connection__select-item">Административное право</li>
-									<li class="connection__select-item">Антимонопольное право</li>
-									<li class="connection__select-item">Интеллектуальная собственность</li>
-									<li class="connection__select-item">Корпоративное право</li>
-									<li class="connection__select-item">Международные споры</li>
-									<li class="connection__select-item">Налоговое право</li>
-									<li class="connection__select-item">Семейные споры</li>
-									<li class="connection__select-item">Трудовое право</li>
-									<li class="connection__select-item">Финансы</li>
+									<li class="connection__select-item" tabindex="0">Административное право</li>
+									<li class="connection__select-item" tabindex="0">Антимонопольное право</li>
+									<li class="connection__select-item" tabindex="0">Интеллектуальная собственность</li>
+									<li class="connection__select-item" tabindex="0">Корпоративное право</li>
+									<li class="connection__select-item" tabindex="0">Международные споры</li>
+									<li class="connection__select-item" tabindex="0">Налоговое право</li>
+									<li class="connection__select-item" tabindex="0">Семейные споры</li>
+									<li class="connection__select-item" tabindex="0">Трудовое право</li>
+									<li class="connection__select-item" tabindex="0">Финансы</li>
+									<li class="connection__select-item" tabindex="0">Другое...</li>
 								</ul>
 							</div>
 							<div class="connection__inputr connection__input-wrapper--custom">
-								<textarea id="" class="connection__input connection__input--custom" name="" placeholder="Опишите задачу (не обязательно)"></textarea>
+								<textarea id="input-comment" class="connection__input connection__input--custom" placeholder="Опишите задачу (не обязательно)"></textarea>
 							</div>
 						</div>
 						<p class="connection__footnote">Отправляя запрос, вы соглашаетесь с <a class="connection__footnote-link" href="./pages/">политикой конфиденциальности</a></p>
@@ -556,5 +557,6 @@
 		<script src="./js/pages/index/servicesSwitcher.js"></script>
 		<script src="./js/pages/index/casesFilter.js"></script>
 		<script src="./js/pages/index/casesMap.js"></script>
+		<script src="./js/pages/index/connectionForm.js"></script>
 	</body>
 </html>
