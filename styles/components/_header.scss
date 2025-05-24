@@ -39,9 +39,14 @@
 			text-transform: uppercase;
 			font-weight: $fw-660;
 			&--menu {
+				position: relative;
+				z-index: 5;
 				display: flex;
 				align-items: center;
 				gap: 0.25rem;
+				&.active::before {
+					translate: 0 0;
+				}
 				& button {
 					text-transform: uppercase;
 					font-weight: inherit;
@@ -60,3 +65,4 @@
 		font-weight: $fw-660;
 	}
 }
+@import "./dropdown";

@@ -20,7 +20,7 @@
 				</a>
 				<ul class="header__nav" role="navigation">
 					<li class="header__nav-item" data-hover-text="О компании"><a href="./pages/">о Компании</a></li>
-					<li class="header__nav-item header__nav-item--menu" data-hover-text="Услуги"><button data-services-open>Услуги</button><i class="header__nav-item--icon icon-check-mark"></i></li>
+					<li class="header__nav-item header__nav-item--menu" data-dropdown-open data-hover-text="Услуги"><button>Услуги</button><i class="header__nav-item--icon icon-check-mark"></i></li>
 					<li class="header__nav-item" data-hover-text="Новости"><a href="./pages/">Новости</a></li>
 					<li class="header__nav-item" data-hover-text="Кейсы"><a href="./pages/">Кейсы</a></li>
 					<li class="header__nav-item" data-hover-text="Контакты"><a href="./pages/">Контакты</a></li>
@@ -28,6 +28,117 @@
 				<a class="header__tel" href="tel:+78465553535" data-hover-text="Заказать звонок">8 (846) 555-35-35</a>
 			</div>
 		</header>
+		<div id="dropdown" class="dropdown">
+			<div class="dropdown__container">
+				<ul class="dropdown__switcher switcher">
+					<li class="dropdown__switcher-item switcher__item active" data-type="juridical" tabindex="0" role="button">Юридические лица</li>
+					<li class="dropdown__switcher-item switcher__item" data-type="physical" tabindex="0" role="button">Физические лица</li>
+					<li class="dropdown__switcher-indicator switcher__indicator"></li>
+				</ul>
+				<div class="dropdown__body">
+					<ul class="dropdown__list" data-type="juridical">
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Административное право</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Антимонопольное право</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Корпоративное право</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Международные споры</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Налоговое право</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Семейные споры</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Трудовое право</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Финансы</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+					</ul>
+					<ul class="dropdown__list" data-type="physical">
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Конституционное право</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Гражданское право</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Корпоративное право</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Международные споры</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Налоговое право</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Семейные споры</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Трудовое право</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+						<li class="dropdown__item">
+							<a href="./pages/service.html">Финансы</a>
+							<picture class="dropdown__image-wrapper">
+								<img class="dropdown__image" src="./media/content/img/services/service4.jpg" alt="#" />
+							</picture>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<main>
 			<section class="intro">
 				<div class="intro__container">
@@ -124,10 +235,10 @@
 					<div class="services__titlebox">
 						<h2 class="services__tag">Услуги</h2>
 						<h3 class="services__title">Мы оказываем высококвалифицированные услуги в&nbsp;наиболее проблемных областях права</h3>
-						<ul class="services__switcher">
-							<li class="services__switcher-item active" data-type="juridical" tabindex="0" role="button">Юридические лица</li>
-							<li class="services__switcher-item" data-type="physical" tabindex="0" role="button">Физические лица</li>
-							<li class="services__switcher-indicator"></li>
+						<ul class="services__switcher switcher">
+							<li class="services__switcher-item switcher__item active" data-type="juridical" tabindex="0" role="button">Юридические лица</li>
+							<li class="services__switcher-item switcher__item" data-type="physical" tabindex="0" role="button">Физические лица</li>
+							<li class="services__switcher-indicator switcher__indicator"></li>
 						</ul>
 					</div>
 					<div class="services__body">
@@ -554,6 +665,7 @@
 		</footer>
 		<script src="./js/libs/leaflet.js"></script>
 		<script src="./js/components/numberMask.js"></script>
+		<script src="./js/components/modals.js"></script>
 		<script src="./js/pages/index/servicesSwitcher.js"></script>
 		<script src="./js/pages/index/casesFilter.js"></script>
 		<script src="./js/pages/index/casesMap.js"></script>

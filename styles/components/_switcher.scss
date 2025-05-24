@@ -1,0 +1,34 @@
+.switcher {
+	position: relative;
+	z-index: 0;
+	width: fit-content;
+	overflow: hidden;
+	display: flex;
+	border: $size-1-5px solid rgba($color-D6D0C6, 0.25);
+	border-radius: 2rem;
+	margin-top: 2rem;
+	&__indicator {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		height: 100%;
+		width: 55%;
+		border-radius: 2rem;
+		background-color: rgba($color-FFFFFF, 1);
+		pointer-events: none;
+		transition: transform $duration $spring;
+	}
+	&__item {
+		cursor: pointer;
+		position: relative;
+		mix-blend-mode: difference;
+		padding: 0.5rem 3.5rem;
+		&[data-type="juridical"].active ~ .switcher__indicator {
+			transform: translateX(0%);
+		}
+		&[data-type="physical"].active ~ .switcher__indicator {
+			transform: translateX(90%);
+		}
+	}
+}

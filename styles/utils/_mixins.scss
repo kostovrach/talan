@@ -17,11 +17,11 @@
 	justify-content: center;
 }
 @mixin hover-replacement($t-color-hover, $bg-color-hover) {
-	position: relative;
 	@include flex-center();
+	position: relative;
 	padding: calc($size-12px / 2);
 	overflow: hidden;
-	transition: transform $duration $spring;
+	transition: $duration $spring;
 	&::before {
 		content: attr(data-hover-text);
 		@include flex-center();
@@ -33,14 +33,13 @@
 		background-color: $bg-color-hover;
 		color: $t-color-hover;
 		pointer-events: none;
-		transform: translateY(100%);
-		transition: transform $duration $spring;
+		translate: 0 100%;
+		transition: $duration $spring;
 	}
 	&:hover,
 	&:focus {
-		transform: translateY(0);
 		&::before {
-			transform: translateY(0);
+			translate: 0 0;
 		}
 	}
 }

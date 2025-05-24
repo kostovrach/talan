@@ -1,93 +1,97 @@
 * {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  cursor: default;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	cursor: default;
 }
 
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :active {
-  outline: none;
+	outline: none;
 }
 
 a:active {
-  outline: none;
+	outline: none;
 }
 
 nav,
 footer,
 header,
 aside {
-  display: block;
+	display: block;
 }
 
 input,
 button,
 textarea {
-  font-family: inherit;
+	font-family: inherit;
 }
 
 input::-ms-clear {
-  display: none;
+	display: none;
 }
 
 button,
 a {
-  color: inherit;
-  font-weight: inherit;
-  cursor: pointer;
-  font-size: inherit;
-  background: none;
+	color: inherit;
+	font-weight: inherit;
+	cursor: pointer;
+	font-size: inherit;
+	background: none;
 }
 
 button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+	padding: 0;
+	border: 0;
 }
 
 a,
 a:visited {
-  text-decoration: none;
-  width: fit-content;
-  height: fit-content;
+	text-decoration: none;
+	width: fit-content;
+	height: fit-content;
 }
 
 a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 ul li {
-  list-style: none;
+	list-style: none;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-size: inherit;
-    font-weight: inherit;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
 }
 
 img {
-  vertical-align: top;
+	vertical-align: top;
 }
 
 body {
-  width: 100%;
-  min-height: 100dvh;
-  background: repeating-linear-gradient(
-    to right,
-    rgba($color-020109, 1),
-    rgba($color-020109, 1) 300px,
-    rgba($color-020109, 0.97) 1px,
-    rgba($color-020109, 0.97) 301px
-  );
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	position: relative;
+	scrollbar-gutter: stable;
+	width: 100%;
+	min-height: 100dvh;
+	background: repeating-linear-gradient(to right, rgba($color-020109, 1), rgba($color-020109, 1) 300px, rgba($color-020109, 0.97) 1px, rgba($color-020109, 0.97) 301px);
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  &.block-scroll {
+    overflow: hidden;
+  }
 }
