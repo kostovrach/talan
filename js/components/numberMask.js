@@ -1,9 +1,7 @@
 (function () {
-	const input = document.getElementById("input-tel");
+	const inputs = document.querySelectorAll('[data-type="input-tel"]');
 	const mask = "+7 (___) ___-__-__";
 	const def = mask.replace(/\D/g, "");
-	const pattern = mask.replace(/[_\d]/g, "_");
-	let matrix = mask;
 
 	function setCursorPosition(pos, el) {
 		el.focus();
@@ -18,12 +16,14 @@
 		}
 	}
 
-	function maskInput(event) {
+	function createMask(event) {
+		const input = event.target;
 		let i = 0;
 		let val = input.value.replace(/\D/g, "");
+
 		if (def.length >= val.length) val = def;
 
-		input.value = matrix.replace(/./g, function (a) {
+		input.value = mask.replace(/./g, function (a) {
 			return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a;
 		});
 
@@ -34,12 +34,14 @@
 		}
 	}
 
-	input.addEventListener("input", maskInput, false);
-	input.addEventListener("focus", maskInput, false);
-	input.addEventListener("blur", maskInput, false);
-	input.addEventListener("click", function () {
-		if (input.selectionStart < 4) {
-			setCursorPosition(4, input);
-		}
+	inputs.forEach((input) => {
+		input.addEventListener("input", createMask, false);
+		input.addEventListener("focus", createMask, false);
+		input.addEventListener("blur", createMask, false);
+		input.addEventListener("click", function () {
+			if (input.selectionStart < 4) {
+				setCursorPosition(4, input);
+			}
+		});
 	});
 })();

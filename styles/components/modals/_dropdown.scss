@@ -12,7 +12,7 @@
 	background-color: $color-020109;
 	pointer-events: none;
 	translate: -100% 0;
-	transition: $duration ease;
+	transition: translate $duration ease;
 	&.active {
 		pointer-events: auto;
 		translate: 0 0;

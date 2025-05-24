@@ -28,7 +28,7 @@
 				<a class="header__tel" href="tel:+78465553535" data-hover-text="Заказать звонок">8 (846) 555-35-35</a>
 			</div>
 		</header>
-		<div id="dropdown" class="dropdown">
+		<div id="dropdown" class="dropdown" role="dialog" aria-modal="true">
 			<div class="dropdown__container">
 				<ul class="dropdown__switcher switcher">
 					<li class="dropdown__switcher-item switcher__item active" data-type="juridical" tabindex="0" role="button">Юридические лица</li>
@@ -137,6 +137,12 @@
 						</li>
 					</ul>
 				</div>
+			</div>
+		</div>
+		<div id="modal-form" class="modal-form" role="dialog" aria-modal="true">
+			<div class="modal-form__container">
+				<div class="modal-form__closeBtn icon-cross"></div>
+				<div class="modal-form__title">Расскажите нам о&nbsp;своей проблеме</div>
 			</div>
 		</div>
 		<main>
@@ -593,22 +599,22 @@
 								<input id="input-name" class="connection__input" type="text" required placeholder="Ваше имя" />
 							</div>
 							<div class="connection__input-wrapper">
-								<input id="input-tel" class="connection__input" type="tel" required placeholder="Номер телефона" />
+								<input id="input-tel" class="connection__input" type="tel" data-type="input-tel" required placeholder="Номер телефона" />
 							</div>
-							<div class="connection__select" tabindex="0">
-								<input id="input-service" class="connection__input connection__select-input" type="text" placeholder="Услуга (опционально)" readonly />
-								<i class="connection__select-icon icon-check-mark"></i>
-								<ul class="connection__select-dropdown">
-									<li class="connection__select-item" tabindex="0">Административное право</li>
-									<li class="connection__select-item" tabindex="0">Антимонопольное право</li>
-									<li class="connection__select-item" tabindex="0">Интеллектуальная собственность</li>
-									<li class="connection__select-item" tabindex="0">Корпоративное право</li>
-									<li class="connection__select-item" tabindex="0">Международные споры</li>
-									<li class="connection__select-item" tabindex="0">Налоговое право</li>
-									<li class="connection__select-item" tabindex="0">Семейные споры</li>
-									<li class="connection__select-item" tabindex="0">Трудовое право</li>
-									<li class="connection__select-item" tabindex="0">Финансы</li>
-									<li class="connection__select-item" tabindex="0">Другое...</li>
+							<div class="connection__select select" tabindex="0" role="combobox">
+								<input id="input-service" class="connection__input connection__select-input select__input" type="text" placeholder="Услуга (опционально)" readonly />
+								<i class="connection__select-icon select__icon icon-check-mark"></i>
+								<ul class="connection__select-dropdown select__dropdown" role="listbox">
+									<li class="connection__select-item select__item" role="option" tabindex="0">Административное право</li>
+									<li class="connection__select-item select__item" role="option" tabindex="0">Антимонопольное право</li>
+									<li class="connection__select-item select__item" role="option" tabindex="0">Интеллектуальная собственность</li>
+									<li class="connection__select-item select__item" role="option" tabindex="0">Корпоративное право</li>
+									<li class="connection__select-item select__item" role="option" tabindex="0">Международные споры</li>
+									<li class="connection__select-item select__item" role="option" tabindex="0">Налоговое право</li>
+									<li class="connection__select-item select__item" role="option" tabindex="0">Семейные споры</li>
+									<li class="connection__select-item select__item" role="option" tabindex="0">Трудовое право</li>
+									<li class="connection__select-item select__item" role="option" tabindex="0">Финансы</li>
+									<li class="connection__select-item select__item" role="option" tabindex="0">Другое...</li>
 								</ul>
 							</div>
 							<div class="connection__inputr connection__input-wrapper--custom">
@@ -666,9 +672,9 @@
 		<script src="./js/libs/leaflet.js"></script>
 		<script src="./js/components/numberMask.js"></script>
 		<script src="./js/components/modals.js"></script>
+		<script src="./js/components/select.js"></script>
 		<script src="./js/pages/index/servicesSwitcher.js"></script>
 		<script src="./js/pages/index/casesFilter.js"></script>
 		<script src="./js/pages/index/casesMap.js"></script>
-		<script src="./js/pages/index/connectionForm.js"></script>
 	</body>
 </html>
