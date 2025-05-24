@@ -1,5 +1,6 @@
 .staff {
 	position: relative;
+	max-width: 100vw;
 	background-color: $color-FFFFFF;
 	color: $color-020109;
 	padding: 4rem 0;
@@ -22,6 +23,8 @@
 		object-fit: cover;
 	}
 	&__body {
+		position: relative;
+		z-index: 1;
 		display: grid;
 		grid-template-rows: auto 25%;
 		gap: 2rem;

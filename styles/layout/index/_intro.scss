@@ -1,7 +1,7 @@
 .intro {
 	position: relative;
     overflow: hidden;
-	min-height: 100dvh;
+	height: 100vh;
 	min-height: 100dvh;
 	padding: $size-40px 0;
 	&__container {
@@ -19,10 +19,10 @@
 		gap: 2vw;
 	}
 	&__title {
-		@include fs-text(18vw, $size-256px, $size-96px);
+		@include fs-text(18vw, $size-256px, $size-128px);
 	}
 	&__subtitle {
-		@include fs-text(5vw, $size-56px, $size-24px);
+		@include fs-text(5vw, $size-56px, $size-32px);
 		text-transform: uppercase;
 	}
 	&__contentbox {
@@ -60,7 +60,7 @@
 		}
 	}
 	&__videobox {
-		translate: 0 -100%;
+		translate: 0 -130%;
 		justify-self: flex-end;
 	}
 	&__video-wrapper {

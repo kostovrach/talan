@@ -44,10 +44,12 @@
 	&__title {
 		text-transform: lowercase;
 		font-size: $size-96px;
+		line-height: $size-80px;
 		font-weight: $fw-900;
 	}
 	&__desc {
 		font-size: $size-14px;
+		padding-left: 0.5rem;
 		opacity: 0.8;
 	}
 	&__filter {

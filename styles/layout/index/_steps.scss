@@ -10,11 +10,13 @@
         counter-reset: item-counter;
         display: flex;
         justify-content: flex-end;
+        flex-wrap: wrap;
         gap: 1rem;
         margin-top: 4rem;
     }
     &__item {
         width: 20%;
+        min-width: 14.25rem;
         text-wrap: wrap;
         &-number {
             counter-increment: item-counter;

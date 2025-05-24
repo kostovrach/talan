@@ -17,11 +17,99 @@
 @import "../layout/index/cases";
 @import "../layout/index/connection";
 
+@media (max-width: 1024px) {
+	.services {
+		&__item {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		&__imagebox,
+		&__icon-wrapper {
+			display: none;
+		}
+	}
+}
 @media (max-width: 768px) {
-    .intro {
-        &__titlebox {
-            flex-direction: column;
-            align-items: flex-start;
+	.intro {
+		&__titlebox {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+        &__video-wrapper {
+            display: none;
+        }
+        &__slogan {
+            translate: 0 -50%;
+        }
+	}
+	.about {
+		&__body {
+			padding-left: 0;
+		}
+        &__text {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+		&__values {
+			&-item {
+				align-items: flex-start;
+			}
+			&-number {
+				font-size: $size-48px;
+				line-height: $size-48px;
+			}
+		}
+	}
+    .staff {
+        &__container {
+            display: block;
+        }
+        &__title-container {
+            position: static;
+        }
+        &__image-wrapper {
+            display: none;
         }
     }
+	.services {
+        &__titlebox {
+            width: 100%;
+        }
+		&__name {
+			font-size: 1rem;
+		}
+	}
+	.cases {
+		&__container {
+			display: block;
+		}
+		&__mapbox {
+			display: none;
+		}
+	}
+    .connection {
+        &__inputbox {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+@media (max-width: 560px) {
+    .intro {
+        &__slogan {
+            &-title {
+                font-size: 1.5rem;
+                line-height: 1.75rem;
+            }
+            &-subtitle {
+                word-spacing: normal;
+                gap: 1rem;
+            }
+        }
+    }
+	.cases {
+		&__desc {
+            margin-top: 1rem;
+			grid-column: span 2;
+		}
+	}
 }

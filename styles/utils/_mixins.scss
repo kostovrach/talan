@@ -140,8 +140,8 @@
 	}
 }
 @mixin block-title($margin-top: 2rem) {
-	font-size: $size-48px;
-	line-height: $size-48px;
+	font-size: clamp($size-32px, 3vw, $size-48px);
+	line-height: clamp($size-32px, 3vw, $size-48px);
 	font-weight: $fw-660;
 	margin-top: $margin-top;
 }
@@ -150,6 +150,7 @@
 	position: absolute;
 	bottom: 0;
 	z-index: 0;
+	overflow-x: clip;
 	pointer-events: none;
 	&-layer {
 		position: absolute;
@@ -162,13 +163,13 @@
 		&--1 {
 			height: 20rem;
 			width: 90%;
-			left: -10rem;
+			left: -20%;
 			bottom: -10rem;
 		}
 		&--2 {
 			height: 10rem;
 			width: 50%;
-			right: -10rem;
+			right: -10%;
 			bottom: -5rem;
 		}
 	}
@@ -178,11 +179,13 @@
 	top: 0;
 	width: 100%;
 	z-index: -1;
+	overflow-x: clip;
 	pointer-events: none;
 	&-layer {
 		position: absolute;
 		&--1,
 		&--2 {
+			width: 70%;
 			border-radius: 50%;
 			aspect-ratio: 1/1;
 			background: radial-gradient(rgba($color-0681CE, 0.7) 0%, rgba($color-00276D, 1) 100%);

@@ -34,6 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 
+		dropdown.querySelector(".dropdown__closeBtn").addEventListener("click", () => {
+				dropdown.classList.remove("active");
+				button.classList.remove("active");
+				handleScrollReturn();
+		})
+
 		document.addEventListener("keydown", (e) => {
 			if (e.key === "Escape" && dropdown.classList.contains("active")) {
 				dropdown.classList.remove("active");

@@ -25,13 +25,14 @@
     }
     &__values {
         display: flex;
-        justify-content: space-between;
+        //justify-content: space-between;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 2rem;
         margin-top: 4rem;
         &-item {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 1rem;
         }
         &-number {

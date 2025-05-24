@@ -32,3 +32,14 @@
 		}
 	}
 }
+@media (max-width: 768px) {
+	.switcher {
+		width: 100%;
+		font-size: $size-12px;
+		display: flex;
+		justify-content: space-around;
+		&__item {
+			padding: 0.25rem 1.5rem;
+		}
+	}
+}

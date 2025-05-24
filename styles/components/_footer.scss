@@ -1,64 +1,83 @@
 .footer {
-    padding: 2rem 0 6rem 0;
-    border-top: $size-1px solid rgba($color-D6D0C6, 0.25);
-    &__container {
-        @include content-width();
-        display: flex;
-        flex-direction: column;
-        gap: 6rem;
-    }
-    &__body,
-    &__info {
-        display: grid;
-        grid-template-columns: 40% auto 20%;
-        gap: 2rem;
-    }
-    &__logo {
-        max-width: 22rem;
-        pointer-events: none;
-    }
-    &__nav {
-        text-transform: uppercase;
-        font-size: $size-12px;
-        font-weight: $fw-550;
-        color: $color-D6D0C6;
-        &-item {
-            @include hover-translate($color-FFFFFF);
+	padding: 2rem 0 6rem 0;
+	border-top: $size-1px solid rgba($color-D6D0C6, 0.25);
+	&__container {
+		@include content-width();
+		display: flex;
+		flex-direction: column;
+		gap: 6rem;
+	}
+	&__body,
+	&__info {
+		display: grid;
+		grid-template-columns: 40% auto 20%;
+		gap: 2rem;
+	}
+	&__logo {
+		max-width: 22rem;
+		pointer-events: none;
+	}
+	&__nav {
+		text-transform: uppercase;
+		font-size: $size-12px;
+		font-weight: $fw-550;
+		color: $color-D6D0C6;
+		&-item {
+			@include hover-translate($color-FFFFFF);
+		}
+	}
+	&__connection {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		font-size: $size-13px;
+		font-weight: $fw-550;
+		color: $color-D6D0C6;
+		&-item {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			transition-duration: $duration;
+			&:hover {
+				color: $color-FFFFFF;
+			}
+		}
+	}
+	&__info {
+		align-items: flex-end;
+		font-size: $size-12px;
+		line-height: $size-18px;
+		font-weight: $fw-550;
+		color: rgba($color-D6D0C6, 0.5);
+	}
+	&__link {
+		@include hover-translate(rgba($color-FFFFFF, 0.5));
+		text-transform: uppercase;
+	}
+	&__dev-label {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		& * {
+			pointer-events: none;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.footer {
+		&__body,
+		&__info {
+			display: flex;
+			justify-content: space-between;
+            flex-wrap: wrap-reverse;
+            row-gap: 4rem;
+		}
+        &__info {
+            flex-wrap: wrap;
         }
-    }
-    &__connection {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        font-size: $size-13px;
-        font-weight: $fw-550;
-        color: $color-D6D0C6;
-        &-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition-duration: $duration;
-            &:hover {
-                color: $color-FFFFFF;
-            }
+        &__nav-item::before,
+        &__link::before {
+            display: none;
         }
-    }
-    &__info {
-        align-items: flex-end;
-        font-size: $size-12px;
-        font-weight: $fw-550;
-        color: rgba($color-D6D0C6, 0.5);
-    }
-    &__link {
-        @include hover-translate(rgba($color-FFFFFF, 0.5));
-        text-transform: uppercase;
-    }
-    &__dev-label {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        & * {
-            pointer-events: none;
-        }
-    }
+	}
 }

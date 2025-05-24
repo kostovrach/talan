@@ -102,3 +102,11 @@
 		}
 	}
 }
+@media (max-width: 475px) {
+    .modal-form {
+        &__title {
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+    }
+}
