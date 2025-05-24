@@ -1,0 +1,63 @@
+.touch-menu {
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: auto;
+	right: 0;
+	width: 21rem;
+	background: linear-gradient(-135deg, rgba($color-0681CE, 0.4) 0%, rgba($color-0B5DAA, 0.2) 25%, rgba($color-020109, 1) 80%);
+	background-color: rgba($color-020109, 1);
+	border-bottom-left-radius: 100%;
+	color: inherit;
+	max-width: 5rem;
+	max-height: 5rem;
+    opacity: 0;
+	overflow: hidden;
+    pointer-events: none;
+	transition: $duration;
+    &::backdrop {
+        display: none;
+    }
+	&.open {
+		max-width: 30rem;
+		max-height: 30rem;
+        opacity: 1;
+        pointer-events: auto;
+	}
+	&.closing {
+		max-width: 5rem;
+		max-height: 5rem;
+        pointer-events: none;
+	}
+	&__closeBtn {
+		cursor: pointer;
+		position: absolute;
+		top: 1.5rem;
+		right: 2rem;
+		font-size: 1.5rem;
+	}
+	&__container {
+		padding: 6rem 2rem;
+		padding-top: 5rem;
+	}
+	&__list {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 1rem;
+		& * {
+			font-size: $size-14px;
+			font-weight: $fw-660;
+			text-transform: uppercase;
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		&--icon {
+			rotate: 90deg;
+		}
+	}
+}

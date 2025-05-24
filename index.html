@@ -25,7 +25,10 @@
 					<li class="header__nav-item" data-hover-text="Кейсы"><a href="./pages/">Кейсы</a></li>
 					<li class="header__nav-item" data-hover-text="Контакты"><a href="./pages/">Контакты</a></li>
 				</ul>
-				<a class="header__tel" href="tel:+78465553535" data-hover-text="Заказать звонок">8 (846) 555-35-35</a>
+				<button class="header__tel" data-form-open data-hover-text="Заказать звонок">8 (846) 555-35-35</button>
+				<div class="header__burger" data-touch-open role="button">
+					<span></span>
+				</div>
 			</div>
 		</header>
 		<div id="dropdown" class="dropdown" role="dialog" aria-modal="true">
@@ -139,18 +142,58 @@
 				</div>
 			</div>
 		</div>
-		<div id="modal-form" class="modal-form" role="dialog" aria-modal="true">
+		<dialog id="modal-form" class="modal-form">
 			<div class="modal-form__container">
-				<div class="modal-form__closeBtn icon-cross"></div>
-				<div class="modal-form__title">Расскажите нам о&nbsp;своей проблеме</div>
+				<div class="modal-form__closeBtn icon-cross" tabindex="0" role="button"></div>
+				<from class="modal-form__form">
+					<div class="modal-form__title" role="heading">Расскажите нам о&nbsp;своей проблеме</div>
+					<div class="modal-form__inputbox">
+						<input class="modal-form__input" type="text" placeholder="Ваше имя" />
+						<input class="modal-form__input" type="tel" required data-type="input-tel" placeholder="Номер телефона" />
+						<div class="modal-form__select select" tabindex="0" role="combobox">
+							<input id="input-service" class="modal-form__input modal-form__select-input select__input" type="text" placeholder="Услуга (опционально)" tabindex="-1" readonly />
+							<i class="modal-form__select-icon select__icon icon-check-mark"></i>
+							<ul class="modal-form__select-dropdown select__dropdown" role="listbox">
+								<li class="modal-form__select-item select__item" role="option" tabindex="0">Административное право</li>
+								<li class="modal-form__select-item select__item" role="option" tabindex="0">Антимонопольное право</li>
+								<li class="modal-form__select-item select__item" role="option" tabindex="0">Интеллектуальная собственность</li>
+								<li class="modal-form__select-item select__item" role="option" tabindex="0">Корпоративное право</li>
+								<li class="modal-form__select-item select__item" role="option" tabindex="0">Международные споры</li>
+								<li class="modal-form__select-item select__item" role="option" tabindex="0">Налоговое право</li>
+								<li class="modal-form__select-item select__item" role="option" tabindex="0">Семейные споры</li>
+								<li class="modal-form__select-item select__item" role="option" tabindex="0">Трудовое право</li>
+								<li class="modal-form__select-item select__item" role="option" tabindex="0">Финансы</li>
+								<li class="modal-form__select-item select__item" role="option" tabindex="0">Другое...</li>
+							</ul>
+						</div>
+						<textarea class="modal-form__input modal-form__input--custom" placeholder="Опишите задачу (не обязательно)"></textarea>
+					</div>
+					<div>
+						<p class="modal-form__footnote">Отправляя запрос, вы соглашаетесь с <a class="modal-form__footnote-link" href="./pages/">политикой конфиденциальности</a></p>
+						<button class="modal-form__button" type="submit">Отправить запрос<i class="modal-form__button--icon icon-arrow"></i></button>
+					</div>
+				</from>
 			</div>
-		</div>
+		</dialog>
+		<dialog id="touch-menu" class="touch-menu">
+			<div class="touch-menu__container">
+				<div class="touch-menu__closeBtn icon-cross" tabindex="0" role="button"></div>
+				<ul class="touch-menu__list">
+					<li class="touch-menu__item"><a href="./pages/">о Компании</a></li>
+					<li class="touch-menu__item"><button data-dropdown-open>Услуги</button><i class="touch-menu__item--icon icon-check-mark"></i></li>
+					<li class="touch-menu__item"><a href="./pages/">Новости</a></li>
+					<li class="touch-menu__item"><a href="./pages/">Кейсы</a></li>
+					<li class="touch-menu__item"><a href="./pages/">Контакты</a></li>
+					<li class="touch-menu__item"><button data-form-open>Заказать звонок</button></li>
+				</ul>
+			</div>
+		</dialog>
 		<main>
 			<section class="intro">
 				<div class="intro__container">
 					<div class="intro__titlebox">
 						<h1 class="intro__title">Талан</h1>
-						<h2 class="intro__subtitle">Юридическая компания</h2>
+						<h2 class="intro__subtitle">Юридическая<br />компания</h2>
 					</div>
 					<div class="intro__contentbox">
 						<div class="intro__slogan">
@@ -602,7 +645,7 @@
 								<input id="input-tel" class="connection__input" type="tel" data-type="input-tel" required placeholder="Номер телефона" />
 							</div>
 							<div class="connection__select select" tabindex="0" role="combobox">
-								<input id="input-service" class="connection__input connection__select-input select__input" type="text" placeholder="Услуга (опционально)" readonly />
+								<input id="input-service" class="connection__input connection__select-input select__input" type="text" placeholder="Услуга (опционально)" tabindex="-1" readonly />
 								<i class="connection__select-icon select__icon icon-check-mark"></i>
 								<ul class="connection__select-dropdown select__dropdown" role="listbox">
 									<li class="connection__select-item select__item" role="option" tabindex="0">Административное право</li>

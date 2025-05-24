@@ -8,13 +8,11 @@
 	align-items: center;
 	justify-content: center;
 }
-@mixin fs-text() {
-	font-size: clamp($size-48px, 13vw, calc($size-128px * 1.4));
-	line-height: clamp($size-48px, 13vw, calc($size-128px * 1.4));
+@mixin fs-text($fs: 13vw, $max-fs: $size-128px, $min-fs: $size-48px) {
+	font-size: clamp($min-fs, $fs, $max-fs);
+	line-height: clamp($min-fs, $fs, $max-fs);
 	text-transform: lowercase;
 	font-weight: $fw-750;
-	display: flex;
-	justify-content: center;
 }
 @mixin hover-replacement($t-color-hover, $bg-color-hover) {
 	@include flex-center();
@@ -176,10 +174,13 @@
 	}
 }
 @mixin block-fog-bg() {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
 	pointer-events: none;
 	&-layer {
 		position: absolute;
-		z-index: -1;
 		&--1,
 		&--2 {
 			border-radius: 50%;

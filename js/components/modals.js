@@ -58,4 +58,84 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		});
 	});
+
+	document.querySelectorAll("[data-form-open]").forEach((button) => {
+		const modalForm = document.querySelector("#modal-form");
+		const closeBtn = modalForm.querySelector(".modal-form__closeBtn");
+
+		button.addEventListener("click", () => {
+			modalForm.classList.remove("closing");
+			modalForm.showModal();
+			handleScrollBlock();
+
+			requestAnimationFrame(() => {
+				modalForm.classList.add("open");
+			});
+		});
+
+		closeBtn.addEventListener("click", () => {
+			modalForm.classList.remove("open");
+			modalForm.classList.add("closing");
+			handleScrollReturn();
+
+			modalForm.addEventListener("transitionend", onCloseAnimationEnd, { once: true });
+		});
+
+		modalForm.addEventListener("cancel", (e) => {
+			e.preventDefault();
+			modalForm.classList.remove("open");
+			modalForm.classList.add("closing");
+			handleScrollReturn();
+
+			modalForm.addEventListener("transitionend", onCloseAnimationEnd, { once: true });
+		});
+
+		function onCloseAnimationEnd() {
+			modalForm.close();
+			modalForm.classList.remove("closing");
+		}
+	});
+
+	document.querySelectorAll("[data-touch-open]").forEach((button) => {
+		const modalTouch = document.querySelector("#touch-menu");
+		const closeBtn = modalTouch.querySelector(".touch-menu__closeBtn");
+
+		button.addEventListener("click", () => {
+			modalTouch.classList.remove("closing");
+			modalTouch.showModal();
+
+			requestAnimationFrame(() => {
+				modalTouch.classList.add("open");
+			});
+		});
+
+		closeBtn.addEventListener("click", () => {
+			modalTouch.classList.remove("open");
+			modalTouch.classList.add("closing");
+
+			modalTouch.addEventListener("transitionend", onCloseAnimationEnd, { once: true });
+		});
+
+		modalTouch.querySelectorAll(".touch-menu__item").forEach((item) => {
+			item.addEventListener("click", () => {
+				modalTouch.classList.remove("open");
+				modalTouch.classList.add("closing");
+
+				modalTouch.addEventListener("transitionend", onCloseAnimationEnd, { once: true });
+			});
+		});
+
+		modalTouch.addEventListener("cancel", (e) => {
+			e.preventDefault();
+			modalTouch.classList.remove("open");
+			modalTouch.classList.add("closing");
+
+			modalTouch.addEventListener("transitionend", onCloseAnimationEnd, { once: true });
+		});
+
+		function onCloseAnimationEnd() {
+			modalTouch.close();
+			modalTouch.classList.remove("closing");
+		}
+	});
 });

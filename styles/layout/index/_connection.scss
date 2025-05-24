@@ -1,3 +1,4 @@
+@import "../../components/select";
 .connection {
 	position: relative;
 	padding: 10rem 0;
@@ -5,8 +6,10 @@
 		@include content-width();
 	}
 	&__title {
-		@include fs-text();
+		@include fs-text(13vw, calc($size-128px * 1.4));
 		text-wrap: nowrap;
+		display: flex;
+		justify-content: center;
 	}
 	&__links {
 		display: flex;
@@ -85,4 +88,3 @@
 		@include block-fog-bg();
 	}
 }
-@import "../../components/select";

@@ -1,10 +1,14 @@
+@import "./modals/dropdown";
+@import "./modals/modal-form";
+@import "./modals/touch-menu";
 .header {
-	width: 100%;
+	width: 100vw;
 	position: fixed;
 	top: 0;
 	z-index: 3;
 	mix-blend-mode: difference;
 	padding: $size-12px 0;
+	align-self: center;
 	&__container {
 		@include content-width();
 		font-size: $size-12px;
@@ -64,6 +68,37 @@
 		text-transform: uppercase;
 		font-weight: $fw-660;
 	}
+	&__burger {
+		@include flex-center();
+		cursor: pointer;
+		position: relative;
+		width: 2rem;
+		height: 1.5rem;
+		& span {
+			width: 100%;
+			background-color: $color-FFFFFF;
+			height: 0.175rem;
+			border-radius: 0.5rem;
+			overflow: hidden;
+			pointer-events: none;
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 0.175rem;
+				border-radius: 0.5rem;
+				overflow: hidden;
+				background-color: inherit;
+				pointer-events: none;
+			}
+			&::after {
+				top: auto;
+				bottom: 0;
+			}
+		}
+	}
 }
-@import "./modals/dropdown";
-@import "./modals/modal-form";

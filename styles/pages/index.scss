@@ -16,3 +16,12 @@
 @import "../layout/index/steps";
 @import "../layout/index/cases";
 @import "../layout/index/connection";
+
+@media (max-width: 768px) {
+    .intro {
+        &__titlebox {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
