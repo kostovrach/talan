@@ -66,6 +66,10 @@
 			right: 0.1rem;
 			rotate: 90deg;
 		}
+		&::after {
+			top: auto;
+			bottom: 0;
+		}
 	}
 	&__fog {
         @include block-fog-border();

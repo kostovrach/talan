@@ -5,8 +5,10 @@
 	left: auto;
 	right: 0;
 	width: 21rem;
-	background: linear-gradient(-135deg, rgba($color-0681CE, 0.4) 0%, rgba($color-0B5DAA, 0.2) 25%, rgba($color-020109, 1) 80%);
-	background-color: rgba($color-020109, 1);
+	background: linear-gradient(-135deg, rgba($color-0B5DAA, 0.8) 0%, rgba($color-0B5DAA, 0.6) 25%, rgba($color-020109, 0.8) 80%);
+	background-color: rgba($color-020109, 0.6);
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
 	border-bottom-left-radius: 100%;
 	color: inherit;
 	max-width: 5rem;

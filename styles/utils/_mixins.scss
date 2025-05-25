@@ -34,8 +34,7 @@
 		translate: 0 100%;
 		transition: $duration $spring;
 	}
-	&:hover,
-	&:focus {
+	&:hover {
 		&::before {
 			translate: 0 0;
 		}
@@ -121,6 +120,7 @@
 	background-color: $color-FFFFFF;
 	padding: $padding;
 	padding-bottom: $padding-bottom;
+	overflow: hidden;
 }
 @mixin block-tag($color) {
 	position: relative;

@@ -2,7 +2,7 @@
 	position: relative;
     overflow: hidden;
 	height: 100vh;
-	min-height: 100dvh;
+	min-height: 100vh;
 	padding: $size-40px 0;
 	&__container {
 		@include content-width();
