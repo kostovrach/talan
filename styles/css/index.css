@@ -1770,7 +1770,7 @@ body {
   border-radius: 50%;
   background: radial-gradient(#0681ce 0%, rgba(6, 129, 206, 0.9) 50%, #00276d 100%);
   filter: blur(20px);
-  will-change: transform width;
+  will-change: animation;
   animation: fog 20s linear infinite;
 }
 .intro__fog-layer--1 {
