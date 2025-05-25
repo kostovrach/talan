@@ -1107,7 +1107,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 4rem 2rem;
+  padding: 2rem;
 }
 .modal-form__closeBtn {
   cursor: pointer;
@@ -1219,6 +1219,9 @@ body {
 }
 
 @media (max-width: 475px) {
+  .modal-form__container {
+    padding-bottom: 6rem;
+  }
   .modal-form__title {
     font-size: 2rem;
     line-height: 2rem;
