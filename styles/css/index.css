@@ -1770,8 +1770,8 @@ body {
   border-radius: 50%;
   background: radial-gradient(#0681ce 0%, rgba(6, 129, 206, 0.9) 50%, #00276d 100%);
   filter: blur(20px);
-  will-change: animation;
-  animation: fog 20s linear infinite;
+  will-change: transform;
+  animation: fog-mobile 20s linear infinite;
 }
 .intro__fog-layer--1 {
   height: 40rem;
@@ -1807,6 +1807,14 @@ body {
   100% {
     transform: translateX(-130%);
     aspect-ratio: 4/1;
+  }
+}
+@keyframes fog-mobile {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(-130%);
   }
 }
 .about {
@@ -2843,6 +2851,10 @@ body {
   }
   .intro__slogan {
     translate: 0 -50%;
+  }
+  .intro__fog-layer--1, .intro__fog-layer--2, .intro__fog-layer--3 {
+    aspect-ratio: 3/1;
+    animation-name: fog-mobile;
   }
   .about__body {
     padding-left: 0;

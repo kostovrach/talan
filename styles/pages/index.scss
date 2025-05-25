@@ -44,6 +44,16 @@
         &__slogan {
             translate: 0 -50%;
         }
+		&__fog {
+			&-layer {
+				&--1,
+				&--2,
+				&--3 {
+					aspect-ratio: 3/1;
+					animation-name: fog-mobile;
+				}
+			}
+		}
 	}
 	.about {
 		&__body {
