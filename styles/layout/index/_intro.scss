@@ -99,7 +99,7 @@
         border-radius: 50%;
         background: radial-gradient(rgba($color-0681CE, 1) 0%, rgba($color-0681CE, 0.9) 50%, rgba($color-00276D, 1) 100%);
 		filter: blur(20px);
-		will-change: transform;
+		will-change: transform width;
       	animation: fog 20s linear infinite;
 	  }
       &--1 {
