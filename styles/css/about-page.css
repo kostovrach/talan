@@ -1107,7 +1107,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem;
+  padding: 4rem 2rem;
 }
 .modal-form__closeBtn {
   cursor: pointer;
