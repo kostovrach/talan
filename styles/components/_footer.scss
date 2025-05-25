@@ -74,6 +74,7 @@
 		}
         &__info {
             flex-wrap: wrap;
+			row-gap: 1.5rem;
         }
         &__nav-item::before,
         &__link::before {

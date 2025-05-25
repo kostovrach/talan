@@ -34,6 +34,10 @@
 			flex-direction: column;
 			align-items: flex-start;
 		}
+		&__contentbox {
+			display: flex;
+			align-items: flex-start;
+		}
         &__video-wrapper {
             display: none;
         }
