@@ -1,4 +1,6 @@
 .footer {
+	position: relative;
+	z-index: 1;
 	padding: 2rem 0 6rem 0;
 	border-top: $size-1px solid rgba($color-D6D0C6, 0.25);
 	&__container {

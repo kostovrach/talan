@@ -1,0 +1,139 @@
+.news {
+    position: relative;
+	padding: 4rem 0;
+	background-color: $color-FFFFFF;
+	color: $color-020109;
+	&__container {
+		@include content-width();
+	}
+	&__titlebox {
+		@include flex-center();
+		flex-direction: column;
+	}
+	&__title {
+		@include fs-text(30vw, calc($size-256px * 1.3));
+	}
+	&__tagsbox {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__tag {
+		@include hover-replacement($color-FFFFFF, $color-020109);
+		cursor: pointer;
+		text-transform: uppercase;
+		font-size: $size-12px;
+		line-height: $size-12px;
+		font-weight: $fw-660;
+		&.active {
+			pointer-events: none;
+			border-bottom: $color-020109 solid $size-1-25px;
+		}
+	}
+	&__list {
+		counter-reset: item-counter;
+        position: relative;
+        z-index: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin-top: 4rem;
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		gap: 1rem;
+		&::before {
+			counter-increment: item-counter;
+			content: "(0" counter(item-counter) ")";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: $size-12px;
+			font-weight: $fw-550;
+		}
+	}
+	&__image-wrapper {
+		@include flex-center();
+		max-width: 35.18rem;
+		max-height: 26.25rem;
+		overflow: hidden;
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__contentbox {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__item-tag {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: $size-13px;
+		font-weight: $fw-550;
+		opacity: 0.5;
+		&::before {
+			content: "";
+			display: block;
+			width: 0.5rem;
+			aspect-ratio: 1/1;
+			background-color: $color-020109;
+			border-radius: 50%;
+		}
+	}
+	&__text {
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		font-size: $size-13px;
+		font-weight: $fw-550;
+		text-wrap: wrap;
+		&-item {
+			opacity: 0.6;
+			&--title {
+				text-transform: uppercase;
+				font-size: $size-14px;
+				font-weight: $fw-750;
+				opacity: 1;
+			}
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		font-size: $size-15px;
+		font-weight: $fw-550;
+		&:hover {
+			& .news__link--icon {
+				translate: 50% 0;
+				scale: 1;
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+		&--icon {
+			font-size: $size-12px;
+			rotate: 45deg;
+			color: $color-FFFFFF;
+			background-color: $color-020109;
+			border-radius: 50%;
+			padding: 0.5rem;
+			scale: 0.3;
+			transition: $duration;
+			&::before {
+				opacity: 0;
+				transition: $duration;
+			}
+		}
+	}
+    &__fog {
+        @include block-fog-border();
+    }
+}

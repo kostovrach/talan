@@ -1467,6 +1467,8 @@ body {
   }
 }
 .footer {
+  position: relative;
+  z-index: 1;
   padding: 2rem 0 6rem 0;
   border-top: 0.0625rem solid rgba(214, 208, 198, 0.25);
 }
@@ -2027,7 +2029,7 @@ body {
   width: 100%;
   position: absolute;
   bottom: 0;
-  z-index: 0;
+  z-index: 1;
   overflow-x: clip;
   pointer-events: none;
 }
