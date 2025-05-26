@@ -23,8 +23,13 @@
 			grid-template-columns: repeat(3, 1fr);
 		}
 		&__imagebox,
-		&__icon-wrapper {
+		&__number {
 			display: none;
+		}
+		&__icon {
+			scale: 1;
+			opacity: 1;
+			translate: 0 0;
 		}
 	}
 }
@@ -120,6 +125,32 @@
             }
         }
     }
+	.steps {
+		&__list {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+		&__item:nth-child(odd) {
+			justify-self: flex-end;
+		}
+	}
+	.services {
+		&__list {
+			gap: 1rem;
+		}
+		&__item {
+			grid-template-columns: 70% auto;
+			max-height: none;
+			height: fit-content;
+		}
+		&__desc {
+			grid-row: 2;
+			grid-column: span 2;
+		}
+		&__icon-wrapper {
+			justify-self: flex-end;
+		}
+	}
 	.cases {
 		&__desc {
             margin-top: 1rem;

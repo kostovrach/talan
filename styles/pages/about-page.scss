@@ -11,3 +11,91 @@
 
 @import "../layout/about/biography";
 @import "../layout/about/values";
+@import "../layout/about/docs";
+@import "../layout/about/about";
+@import "../layout/about/news";
+@import "../layout/about/connection";
+
+@media (max-width: 1190px) {
+    .connection {
+        &__container {
+            gap: 2rem;
+        }
+        &__body {
+            translate: 0 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+	.biography {
+		&__image-wrapper--interaction {
+			&-layer {
+				&-front {
+					rotate: 4deg;
+					translate: 0 0;
+				}
+				&-back {
+					rotate: -2deg;
+					opacity: 1;
+					translate: 0 0;
+				}
+			}
+		}
+		&__item,
+		&__item--first-of-type {
+			flex-direction: column;
+			margin: 8rem 0;
+			& > * {
+				width: 100%;
+			}
+		}
+		&__timeline {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 2rem;
+			&-item {
+				max-width: 15rem;
+			}
+		}
+		&__team {
+			grid-template-columns: 1fr;
+			gap: 4rem;
+		}
+	}
+	.about {
+		&__item,
+        &__item--last-of-type {
+			flex-direction: column;
+			margin: 8rem 0;
+			& > * {
+				width: 100%;
+			}
+		}
+	}
+    .connection {
+        &__subtitle {
+            font-size: 1.25rem;
+            line-height: 1.25rem;
+        }
+    }
+}
+@media (max-width: 560px) {
+	.biography {
+		&__timeline {
+			&-item {
+				max-width: none;
+			}
+		}
+	}
+	.values {
+		&__list {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+		&__item:nth-child(odd) {
+			justify-self: flex-end;
+		}
+	}
+}

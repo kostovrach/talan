@@ -1,0 +1,72 @@
+.docs {
+    &__container {
+        @include content-width();
+    }
+    &__title {
+        @include block-title();
+    }
+    &__body {
+        margin-top: 4rem;
+    }
+    &__slide {
+        max-width: 17.5rem;
+        aspect-ratio: 1/1;
+        padding: 2rem 1rem;
+        border: $size-1-25px solid rgba($color-D6D0C6, 0.5);
+        border-left: none;
+        border-right: none;
+        transition: $duration;
+        &:hover {
+            translate: 0 -10%;
+            & .docs__slide-link {
+                max-height: 2rem;
+            }
+        }
+        &-wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-title {
+            text-wrap: wrap;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: $size-14px;
+            font-weight: $fw-750;
+        }
+        &-icon {
+            max-width: $size-48px;
+            aspect-ratio: 1/1;
+        }
+        &-link {
+            color: $color-AAA8AC;
+            font-size: $size-14px;
+            max-height: 0;
+            overflow: hidden;
+            transition: $duration;
+        }
+    }
+    &__footer {
+        width: 100%;
+        @include flex-center();
+        gap: 1rem;
+        padding: 2rem;
+    }
+    &__nav-icon {
+        cursor: pointer;
+        font-size: $size-12px;
+        transition: $duration;
+        &--prev {
+            rotate: -130deg;
+        }
+        &--next {
+            rotate: 45deg;
+        }
+        &.disable {
+            opacity: 0.5;
+            scale: 0.8;
+        }
+    }
+}

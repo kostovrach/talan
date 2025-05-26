@@ -1,0 +1,57 @@
+.connection {
+	position: relative;
+	padding: 8rem 0;
+	&__container {
+		@include content-width();
+		@include flex-center();
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	&__title {
+		@include fs-text(13vw, calc($size-256px / 1.3));
+		text-wrap: nowrap;
+		align-self: flex-start;
+	}
+	&__body {
+		max-width: 35.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		translate: 0 -50%;
+	}
+	&__subtitle {
+        text-wrap: wrap;
+		font-size: $size-40px;
+		line-height: $size-40px;
+		font-weight: $fw-660;
+	}
+	&__linksbox {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+        flex-wrap: wrap;
+		gap: 2rem;
+	}
+	&__link {
+		@include hover-replacement($color-020109, $color-FFFFFF);
+		text-transform: uppercase;
+		font-size: $size-12px;
+		font-weight: $fw-660;
+		height: fit-content;
+	}
+	&__button {
+		@include button($color-FFFFFF, $color-FFFFFF, none, none, $color-FFFFFF, $color-020109, $color-FFFFFF);
+		font-weight: $fw-660;
+		&--icon {
+			top: 0.1rem;
+			right: 0.1rem;
+		}
+		&:hover::after,
+		&:focus::after {
+			scale: 80;
+		}
+	}
+	&__fog {
+		@include block-fog-bg();
+	}
+}
