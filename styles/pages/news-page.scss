@@ -11,3 +11,39 @@
 
 @import "../layout/news/news";
 @import "../layout/news/connection";
+
+@media (max-width: 1190px) {
+    .connection {
+        &__container {
+            gap: 2rem;
+        }
+        &__body {
+            translate: 0 0;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .news {
+        &__image-wrapper {
+            aspect-ratio: 2/1;
+        }
+    }
+    .connection {
+        position: relative;
+        z-index: 1;
+        &__subtitle {
+            font-size: 1.25rem;
+            line-height: 1.25rem;
+        }
+    }
+}
+@media (max-width: 560px) {
+    .news {
+        &__image-wrapper {
+            display: none;
+        }
+        &__text {
+            width: 100%;
+        }
+    }
+}

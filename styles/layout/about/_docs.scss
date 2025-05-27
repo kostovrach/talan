@@ -24,10 +24,13 @@
         }
         &-wrapper {
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            align-self: center;
+            & > * {
+                justify-self: center;
+                align-self: center;
+            }
         }
         &-title {
             text-wrap: wrap;
@@ -37,15 +40,20 @@
             font-weight: $fw-750;
         }
         &-icon {
-            max-width: $size-48px;
-            aspect-ratio: 1/1;
+            font-size: $size-48px;
         }
         &-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             color: $color-AAA8AC;
             font-size: $size-14px;
             max-height: 0;
             overflow: hidden;
             transition: $duration;
+            & i {
+                pointer-events: none;
+            }
         }
     }
     &__footer {

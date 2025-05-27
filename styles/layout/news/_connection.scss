@@ -1,6 +1,4 @@
 .connection {
-	position: relative;
-	z-index: 0;
 	padding: 4rem 0;
 	&__container {
 		@include content-width();

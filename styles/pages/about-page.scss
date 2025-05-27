@@ -74,6 +74,16 @@
 			}
 		}
 	}
+	.docs {
+		&__slide {
+			&:hover {
+				translate: 0 0;
+			}
+			&-link {
+				max-height: 2rem;
+			}
+		}
+	}
     .connection {
         &__subtitle {
             font-size: 1.25rem;
