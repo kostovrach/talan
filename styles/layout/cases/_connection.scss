@@ -1,0 +1,38 @@
+.connection {
+    padding: 6rem 0;
+    &__container {
+        @include content-width();
+    }
+    &__title {
+        @include fs-text(12vw, calc($size-256px / 1.4));
+        text-wrap: nowrap;
+        text-transform: inherit;
+    }
+    &__body {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 4rem;
+        &-wrapper {
+            width: 40%;
+            text-wrap: wrap;
+        }
+    }
+    &__subtitle {
+        font-size: $size-24px;
+        line-height: $size-24px;
+        font-weight: $fw-550;
+    }
+    &__button {
+        @include button($color-FFFFFF, $color-FFFFFF, none, none, inherit, $color-020109, $color-FFFFFF);
+        width: 100%;
+        margin-top: 2rem;
+        font-weight: $fw-660;
+        &--icon {
+            top: 0.1rem;
+            right: 0.1rem;
+        }
+        &:hover::after {
+            scale: 95;
+        }
+    }
+}

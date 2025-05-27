@@ -9,3 +9,56 @@
 @import "../components/screen-blur";
 
 @import "../layout/cases/cases";
+@import "../layout/cases/connection";
+
+@media (max-width: 768px) {
+	.cases {
+		&__desc {
+			grid-template-columns: repeat(2, 1fr);
+			&-wrapper {
+				grid-column: 1;
+			}
+		}
+		&__item {
+			grid-template-columns: 90% auto;
+            &-icon {
+                font-size: $size-32px;
+                rotate: 45deg;
+                translate: 0 0;
+            }
+		}
+		&__imagebox {
+			display: none;
+		}
+	}
+    .connection {
+        position: relative;
+        z-index: 1;
+        &__body {
+            justify-content: center;
+            &-wrapper {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 560px) {
+	.cases {
+		&__desc {
+			&-wrapper {
+				grid-column: span 2;
+			}
+		}
+        &__item {
+            &-title {
+                font-size: $size-24px;
+                line-height: $size-24px;
+            }
+        }
+	}
+    .connection {
+        &__subtitle {
+            font-size: 1rem;
+        }
+    }
+}

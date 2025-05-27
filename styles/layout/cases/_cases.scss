@@ -1,16 +1,21 @@
 .cases {
+	position: relative;
+	z-index: 1;
 	color: $color-020109;
 	background-color: $color-FFFFFF;
 	padding: 4rem 0;
 	&__container {
 		@include content-width();
+		position: relative;
+		z-index: 1;
+        overflow: hidden;
 	}
 	&__titlebox {
 		display: flex;
 		flex-direction: column;
 	}
 	&__title {
-		@include fs-text(12vw, calc($size-256px / 1.5));
+		@include fs-text(10vw, calc($size-256px / 1.5));
 		text-wrap: nowrap;
 		align-self: center;
 	}
@@ -80,42 +85,75 @@
 		margin-top: $size-40px;
 	}
 	&__list {
+		counter-reset: item-counter;
 		display: flex;
 		flex-direction: column;
 	}
 	&__item {
-        position: relative;
+		counter-increment: item-counter;
+		position: relative;
 		width: 100%;
-        background-color: $color-FFFFFF;
+		background-color: $color-FFFFFF;
 		padding: $size-40px 0;
 		border-top: 0.25rem solid $color-020109;
 		display: grid;
 		grid-template-columns: 70% 20% 10%;
-        & * {
-            pointer-events: none;
-        }
-        &:hover {
-            & .cases__item-image-wrapper {
-                opacity: 1;
-                scale: 1;
-                translate: 0 0;
-            }
-            & .cases__item-icon {
-                translate: 0 0;
-                opacity: 1;
-            }
-        }
+		& * {
+			pointer-events: none;
+		}
+		&:hover {
+			& .cases__item-image-wrapper {
+				opacity: 1;
+				scale: 1;
+				translate: 0 0;
+			}
+			& .cases__item-icon {
+				translate: 0 0;
+				opacity: 1;
+			}
+		}
 		&-titlebox {
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			gap: 2rem;
+			height: fit-content;
+			padding-left: 2rem;
+			&::before {
+				content: "0" counter(item-counter);
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: $size-12px;
+				font-weight: $fw-660;
+				opacity: 0.5;
+			}
 		}
 		&-title {
 			@include block-title();
 		}
 		&-tagsbox {
+			display: flex;
+			align-items: center;
+            flex-wrap: wrap;
+			column-gap: 2rem;
 		}
 		&-tag {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			font-size: $size-13px;
+			font-weight: $fw-550;
+			opacity: 0.5;
+			&::before {
+				display: block;
+				content: "";
+				width: 0.5rem;
+				aspect-ratio: 1/1;
+				background-color: $color-020109;
+				border-radius: 50%;
+			}
 		}
 		&-image-wrapper {
 			@include card-effect(18.25rem, 24.75rem, 0.25rem, 0);
@@ -123,25 +161,28 @@
 			-webkit-box-shadow: 0px 0px 16px 6px rgba($color-020109, 0.2);
 			-moz-box-shadow: 0px 0px 16px 6px rgba($color-020109, 0.2);
 			box-shadow: 0px 0px 16px 6px rgba($color-020109, 0.2);
-            position: absolute;
-            bottom: -30%;
-            opacity: 0;
-            scale: 0.7;
-            translate: 0 20%;
-            transition: $duration;
+			position: absolute;
+			bottom: -30%;
+			opacity: 0;
+			scale: 0.7;
+			translate: 0 20%;
+			transition: $duration;
 		}
 		&-image {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 		}
-        &-icon {
-            @include flex-center();
-            font-size: $size-64px;
-            rotate: 90deg;
-            opacity: 0.5;
-            translate: 0 -10%;
-            transition: $duration;
-        }
+		&-icon {
+			@include flex-center();
+			font-size: $size-64px;
+			rotate: 90deg;
+			opacity: 0.5;
+			translate: 0 -10%;
+			transition: $duration;
+		}
+	}
+	&__fog {
+		@include block-fog-border();
 	}
 }
