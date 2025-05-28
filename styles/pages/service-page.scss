@@ -1,0 +1,46 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+@import "../base/reset";
+@import "../base/typography";
+
+@import "../components/header";
+@import "../components/footer";
+@import "../components/screen-blur";
+
+@import "../layout/service/service";
+@import "../layout/service/connection";
+
+@media (max-width: 1024px) {
+    .service {
+        &__header {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        &__body {
+            display: flex;
+            flex-direction: column;
+            &-imagebox {
+                display: none;
+            }
+        }
+        &__desc {
+            text-align: left;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .service {
+        &__subtitle {
+            font-size: 1rem;
+        }
+    }
+	.connection {
+		&__inputbox {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}

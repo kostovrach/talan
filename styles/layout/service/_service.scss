@@ -1,0 +1,119 @@
+.service {
+	padding: 8rem 0;
+	&__container {
+		@include content-width();
+	}
+	&__header {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		&-imagebox {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+		&-image-wrapper {
+			@include card-effect(25rem, 20rem, 0.5rem, 2rem);
+			@include flex-center();
+			rotate: 3.5deg;
+		}
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__titlebox {
+		display: flex;
+		flex-direction: column;
+		gap: $size-48px;
+	}
+	&__title {
+		@include fs-text(5vw, $size-64px, $size-32px);
+		text-transform: none;
+	}
+	&__subtitle {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		font-size: $size-18px;
+		font-weight: $fw-550;
+	}
+	&__body {
+		display: grid;
+		grid-template-columns: auto auto 40%;
+		gap: 2rem;
+		padding: 4rem 0;
+		margin-top: 4rem;
+		&-imagebox {
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+		}
+		&-image-wrapper {
+			@include card-effect(19rem, 25rem, 0.5rem, 2rem);
+			rotate: -3.5deg;
+		}
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__desc-container {
+		position: relative;
+	}
+	&__desc {
+		@include fs-text(5vw, $size-48px, $size-24px);
+		position: sticky;
+		top: 4rem;
+		text-transform: none;
+		text-align: right;
+		text-wrap: nowrap;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+	&__list {
+        counter-reset: item-counter;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+		font-size: $size-14px;
+		&-item {
+			opacity: 0.6;
+			&--title {
+				font-size: $size-18px;
+				font-weight: $fw-550;
+				margin-bottom: 2rem;
+				opacity: 1;
+			}
+			&--marked {
+				list-style: disc outside;
+				margin-left: 1rem;
+				&-number {
+                    counter-increment: item-counter;
+                    position: relative;
+                    padding-left: 1rem;
+                    &::before {
+                        content: counter(item-counter) '.';
+                        position: absolute;
+                        left: 0;
+                    }
+				}
+			}
+		}
+	}
+    &__button {
+        @include button($color-FFFFFF, $color-FFFFFF, none, none, inherit, $color-020109, $color-FFFFFF);
+        font-weight: $fw-660;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        &--icon {
+            position: static;
+            rotate: 45deg;
+        }
+    }
+}
