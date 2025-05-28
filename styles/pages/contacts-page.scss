@@ -7,3 +7,48 @@
 @import "../components/header";
 @import "../components/footer";
 @import "../components/screen-blur";
+
+@import "../layout/contacts/contacts";
+
+@media (max-width: 1024px) {
+    .contacts {
+        &__body {
+            flex-direction: column;
+            gap: 4rem;
+        }
+        &__infobox {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .contacts {
+        &__subtitle {
+            width: 100%;
+        }
+        &__infobox {
+            flex-direction: column;
+            gap: 2rem;
+        }
+        &__item {
+            &-link {
+                font-size: $size-48px;
+                line-height: $size-48px;
+            }
+            &-qr-image-wrapper {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 560px) {
+    .contacts {
+        &__item {
+            &-link {
+                font-size: $size-32px;
+                line-height: $size-32px;
+            }
+        }
+    }
+}
