@@ -1,0 +1,11 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+@import "../base/reset";
+@import "../base/typography";
+
+@import "../components/header";
+@import "../components/footer";
+@import "../components/screen-blur";
+
+@import "../layout/privacy-policy/privacy";
