@@ -1,13 +1,14 @@
 .privacy {
-    //@include flex-center();
+	@include flex-center();
 	padding: 8rem 0;
+	text-wrap: wrap;
 	&__container {
 		@include content-width();
-        width: 50%;
+		max-width: 768px;
 	}
 	&__title {
-		font-size: $size-64px;
-		line-height: $size-64px;
+		@include fs-text(5vw, $size-64px, $size-32px);
+		text-transform: none;
 		font-weight: $fw-660;
 	}
 	&__update-time {
@@ -19,62 +20,62 @@
 	}
 	&__body {
 		counter-reset: item-counter;
-        display: flex;
-        flex-direction: column;
-        gap: 4rem;
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
 		margin-top: 4rem;
 	}
 	&__item {
 		counter-increment: item-counter;
 		counter-reset: subitem-counter;
-        padding-left: $size-48px;
+		padding-left: $size-64px;
 		&-title {
-			font-size: $size-40px;
-			line-height: $size-40px;
+			@include fs-text(2vw, $size-40px, $size-24px);
+			text-transform: none;
 			font-weight: $fw-660;
 			&::before {
 				content: counter(item-counter) ".";
 			}
 		}
 	}
-    &__item,
-    &__subitem,
-    &__sub-subitem {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        &-title {
-            position: relative;
-            &::before {
-                position: absolute;
-                top: 0;
-                left: -4rem;
-            }
-        }
-    }
-    &__subitem,
-    &__sub-subtem {
-        color: $color-D6D0C6;
-        font-size: $size-14px;
-    }
+	&__item,
+	&__subitem,
+	&__sub-subitem {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		&-title {
+			position: relative;
+			&::before {
+				position: absolute;
+				top: 0;
+				left: -4rem;
+			}
+		}
+	}
+	&__subitem,
+	&__sub-subtem {
+		color: $color-D6D0C6;
+		font-size: $size-14px;
+	}
 	&__subitem {
-        counter-increment: subitem-counter;
+		counter-increment: subitem-counter;
 		counter-reset: sub-subitem-counter;
-        margin-top: 2rem;
+		margin-top: 2rem;
 		&-title {
 			font-size: $size-24px;
-            &::before {
-                content: counter(item-counter) '.' counter(subitem-counter);
-            }
+			&::before {
+				content: counter(item-counter) "." counter(subitem-counter);
+			}
 		}
 	}
 	&__sub-subitem {
-        counter-increment: sub-subitem-counter;
+		counter-increment: sub-subitem-counter;
 		&-title {
 			font-size: $size-24px;
-            &::before {
-                content: counter(item-counter) '.' counter(subitem-counter) '.' counter(sub-subitem-counter);
-            }
+			&::before {
+				content: counter(item-counter) "." counter(subitem-counter) "." counter(sub-subitem-counter);
+			}
 		}
 	}
 }

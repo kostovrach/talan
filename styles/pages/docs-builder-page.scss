@@ -1,0 +1,25 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+@import "../base/reset";
+@import "../base/typography";
+
+@import "../components/header";
+@import "../components/footer";
+@import "../components/screen-blur";
+
+@import "../layout/docs-builder/alert";
+
+@media (max-width: 768px) {
+    .alert {
+        &__container {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__form {
+            width: 100%;
+            max-width: none;
+            align-self: center;
+        }
+    }
+}

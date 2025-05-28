@@ -1,0 +1,57 @@
+.requisites {
+	@include flex-center();
+	padding: 8rem 0;
+	text-wrap: wrap;
+	&__container {
+		@include content-width();
+		max-width: 768px;
+		display: flex;
+		flex-direction: column;
+		gap: 8rem;
+	}
+	&__title {
+		@include fs-text(5vw, $size-64px, $size-32px);
+		text-transform: none;
+		font-weight: $fw-660;
+	}
+	&__itembox,
+	&__item,
+	&__hint {
+		display: flex;
+		flex-direction: column;
+	}
+	&__itembox {
+		gap: 4rem;
+	}
+	&__item {
+		gap: 1rem;
+		&--title {
+			color: $color-D6D0C6;
+			font-size: $size-18px;
+			font-weight: $fw-550;
+		}
+		&--text {
+			@include fs-text(2vw, $size-40px, $size-24px);
+			text-transform: none;
+		}
+	}
+	&__hint {
+		gap: 2rem;
+		&-text {
+			font-size: $size-18px;
+			color: $color-D6D0C6;
+		}
+		&-link {
+			text-decoration: underline;
+		}
+		&-qr-wrapper {
+			max-width: 25rem;
+			aspect-ratio: 1/1;
+		}
+		&-qr {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+		}
+	}
+}

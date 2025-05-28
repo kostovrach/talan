@@ -864,17 +864,24 @@ body {
   }
 }
 .privacy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 8rem 0;
+  text-wrap: wrap;
 }
 .privacy__container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 1rem;
-  width: 50%;
+  max-width: 768px;
 }
 .privacy__title {
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: clamp(2rem, 5vw, 4rem);
+  text-transform: lowercase;
+  font-weight: 750;
+  text-transform: none;
   font-weight: 660;
 }
 .privacy__update-time {
@@ -894,11 +901,14 @@ body {
 .privacy__item {
   counter-increment: item-counter;
   counter-reset: subitem-counter;
-  padding-left: 3rem;
+  padding-left: 4rem;
 }
 .privacy__item-title {
-  font-size: 2.5rem;
-  line-height: 2.5rem;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  line-height: clamp(1.5rem, 2vw, 2.5rem);
+  text-transform: lowercase;
+  font-weight: 750;
+  text-transform: none;
   font-weight: 660;
 }
 .privacy__item-title::before {

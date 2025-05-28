@@ -69,6 +69,7 @@
             }
 		}
         &-qr {
+            max-width: fit-content;
             position: relative;
             display: flex;
             align-items: center;
@@ -78,15 +79,14 @@
                 }
             }
             &-image-wrapper {
-                isolation: isolate;
-                pointer-events: none;
                 position: absolute;
                 left: -40%;
+                pointer-events: none;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 opacity: 0;
-                transition: $duration
+                transition: $duration;
             }
         }
 	}
