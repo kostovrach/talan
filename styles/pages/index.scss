@@ -40,15 +40,23 @@
 			align-items: flex-start;
 		}
 		&__contentbox {
+			translate: 0 -25%;
 			display: flex;
+			flex-direction: column-reverse;
 			align-items: flex-start;
+			gap: 4rem;
 		}
-        &__video-wrapper {
-            display: none;
-        }
-        &__slogan {
-            translate: 0 -50%;
-        }
+		&__videobox {
+			align-self: flex-end;
+			translate: 0 0;
+		}
+		&__video-wrapper {
+			//display: none;
+		}
+		&__slogan {
+			translate: 0 0;
+			//translate: 0 -50%;
+		}
 		&__fog {
 			&-layer {
 				&--1,
@@ -64,10 +72,10 @@
 		&__body {
 			padding-left: 0;
 		}
-        &__text {
-            font-size: 1rem;
-            line-height: 1.5rem;
-        }
+		&__text {
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
 		&__values {
 			&-item {
 				align-items: flex-start;
@@ -78,21 +86,21 @@
 			}
 		}
 	}
-    .staff {
-        &__container {
-            display: block;
-        }
-        &__title-container {
-            position: static;
-        }
-        &__image-wrapper {
-            display: none;
-        }
-    }
+	.staff {
+		&__container {
+			display: block;
+		}
+		&__title-container {
+			position: static;
+		}
+		&__image-wrapper {
+			display: none;
+		}
+	}
 	.services {
-        &__titlebox {
-            width: 100%;
-        }
+		&__titlebox {
+			width: 100%;
+		}
 		&__name {
 			font-size: 1rem;
 		}
@@ -105,26 +113,26 @@
 			display: none;
 		}
 	}
-    .connection {
-        &__inputbox {
-            display: flex;
-            flex-direction: column;
-        }
-    }
+	.connection {
+		&__inputbox {
+			display: flex;
+			flex-direction: column;
+		}
+	}
 }
 @media (max-width: 560px) {
-    .intro {
-        &__slogan {
-            &-title {
-                font-size: 1.5rem;
-                line-height: 1.75rem;
-            }
-            &-subtitle {
-                word-spacing: normal;
-                gap: 1rem;
-            }
-        }
-    }
+	.intro {
+		&__slogan {
+			&-title {
+				font-size: 1.5rem;
+				line-height: 1.75rem;
+			}
+			&-subtitle {
+				word-spacing: normal;
+				gap: 1rem;
+			}
+		}
+	}
 	.steps {
 		&__list {
 			display: grid;
@@ -153,7 +161,7 @@
 	}
 	.cases {
 		&__desc {
-            margin-top: 1rem;
+			margin-top: 1rem;
 			grid-column: span 2;
 		}
 	}

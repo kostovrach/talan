@@ -2834,14 +2834,18 @@ body {
     align-items: flex-start;
   }
   .intro__contentbox {
+    translate: 0 -25%;
     display: flex;
+    flex-direction: column-reverse;
     align-items: flex-start;
+    gap: 4rem;
   }
-  .intro__video-wrapper {
-    display: none;
+  .intro__videobox {
+    align-self: flex-end;
+    translate: 0 0;
   }
   .intro__slogan {
-    translate: 0 -50%;
+    translate: 0 0;
   }
   .intro__fog-layer--1, .intro__fog-layer--2, .intro__fog-layer--3 {
     aspect-ratio: 3/1;
