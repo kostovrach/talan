@@ -80,7 +80,7 @@
             }
             &-image-wrapper {
                 position: absolute;
-                left: -40%;
+                translate: -110% 0;
                 pointer-events: none;
                 display: flex;
                 flex-direction: column;
