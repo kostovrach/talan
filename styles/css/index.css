@@ -2839,6 +2839,7 @@ body {
     flex-direction: column-reverse;
     align-items: flex-start;
     gap: 4rem;
+    padding-bottom: 4rem;
   }
   .intro__videobox {
     align-self: flex-end;
