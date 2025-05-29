@@ -1,4 +1,5 @@
 @import "../../components/select";
+@import "../../components/blobs";
 .connection {
 	position: relative;
 	padding: 10rem 0;
@@ -85,8 +86,5 @@
 		&:focus::after {
 			scale: 180;
 		}
-	}
-	&__fog {
-		@include block-fog-bg();
 	}
 }

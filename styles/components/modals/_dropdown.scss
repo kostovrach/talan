@@ -23,12 +23,10 @@
 		cursor: pointer;
 		width: fit-content;
 		align-self: flex-end;
-		//position: absolute;
-		//top: 2.5rem;
-		//right: 1.5rem;
-		//margin-top: 1rem;
+		position: absolute;
+		top: 2.5rem;
+		right: 1.5rem;
 		font-size: 1.5rem;
-		display: none;
 	}
 	&__container {
 		@include content-width();
@@ -100,7 +98,7 @@
 		z-index: 3;
 		padding-top: 1rem;
 		&__closeBtn {
-			display: block;
+			position: static;
 		}
 	}
 }

@@ -174,36 +174,36 @@
 		}
 	}
 }
-@mixin block-fog-bg() {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	overflow-x: clip;
-	pointer-events: none;
-	&-layer {
-		position: absolute;
-		&--1,
-		&--2 {
-			width: 80%;
-			border-radius: 50%;
-			aspect-ratio: 1/1;
-			background: radial-gradient(rgba($color-0681CE, 0.7) 0%, rgba($color-00276D, 1) 100%);
-			filter: blur(60px);
-			opacity: 0.3;
-			transform: translateZ(0);
-			will-change: transform;
-		}
-		&--1 {
-			height: 90%;
-			left: 30%;
-			top: 0%;
-		}
-		&--2 {
-			height: 70%;
-			left: 5%;
-			top: 10%;
-		}
-	}
-}
+// @mixin block-fog-bg() {
+// 	position: absolute;
+// 	top: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	z-index: -1;
+// 	overflow-x: clip;
+// 	pointer-events: none;
+// 	&-layer {
+// 		position: absolute;
+// 		&--1,
+// 		&--2 {
+// 			width: 80%;
+// 			border-radius: 50%;
+// 			aspect-ratio: 1/1;
+// 			background: radial-gradient(rgba($color-0681CE, 0.7) 0%, rgba($color-00276D, 1) 100%);
+// 			filter: blur(60px);
+// 			opacity: 0.3;
+// 			transform: translateZ(0);
+// 			will-change: transform;
+// 		}
+// 		&--1 {
+// 			height: 90%;
+// 			left: 30%;
+// 			top: 0%;
+// 		}
+// 		&--2 {
+// 			height: 70%;
+// 			left: 5%;
+// 			top: 10%;
+// 		}
+// 	}
+// }

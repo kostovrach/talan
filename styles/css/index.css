@@ -936,8 +936,10 @@ body {
   cursor: pointer;
   width: fit-content;
   align-self: flex-end;
+  position: absolute;
+  top: 2.5rem;
+  right: 1.5rem;
   font-size: 1.5rem;
-  display: none;
 }
 .dropdown__container {
   max-width: 1440px;
@@ -1018,7 +1020,7 @@ body {
     padding-top: 1rem;
   }
   .dropdown__closeBtn {
-    display: block;
+    position: static;
   }
 }
 .select {
@@ -1802,7 +1804,7 @@ body {
   background: linear-gradient(to top, white 0%, #0681ce 50%, rgba(11, 93, 170, 0.8) 70%, rgba(11, 93, 170, 0.1) 100%);
   filter: blur(15px);
   left: 0;
-  bottom: 0;
+  bottom: 1rem;
 }
 
 @keyframes fog {
@@ -1827,7 +1829,7 @@ body {
   background-color: #FFFFFF;
   color: #020109;
   padding: 4rem 0;
-  box-shadow: 0 -1rem 0.5rem 0.5rem white;
+  box-shadow: -1px -24px 30px 24px white;
 }
 .about__container {
   max-width: 1440px;

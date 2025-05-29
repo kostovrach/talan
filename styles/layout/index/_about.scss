@@ -2,7 +2,8 @@
     background-color: $color-FFFFFF;
     color: $color-020109;
     padding: 4rem 0;
-    box-shadow: 0 -1rem 0.5rem 0.5rem rgba($color-FFFFFF, 1);
+    box-shadow: -1px -24px 30px 24px rgba($color-FFFFFF, 1);
+    //box-shadow: 0 -1rem 0.5rem 0.5rem rgba($color-FFFFFF, 1);
     &__container {
         @include content-width();
     }

@@ -123,10 +123,11 @@
       &--4 {
         height: 150px;
         width: 100%;
+		//background-image: url("../../media/services/blobs-fade.svg");
 		background: linear-gradient(to top, rgba($color-FFFFFF, 1) 0%, rgba($color-0681CE , 1) 50%, rgba($color-0B5DAA, 0.8) 70%, rgba($color-0B5DAA, 0.1) 100%,);
         filter: blur(15px);
 		left: 0;
-		bottom: 0;
+		bottom: 1rem;
       }
     }
   }

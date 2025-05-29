@@ -880,8 +880,10 @@ body {
   cursor: pointer;
   width: fit-content;
   align-self: flex-end;
+  position: absolute;
+  top: 2.5rem;
+  right: 1.5rem;
   font-size: 1.5rem;
-  display: none;
 }
 .dropdown__container {
   max-width: 1440px;
@@ -962,7 +964,7 @@ body {
     padding-top: 1rem;
   }
   .dropdown__closeBtn {
-    display: block;
+    position: static;
   }
 }
 .select {

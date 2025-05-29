@@ -6,7 +6,7 @@
         @include block-title();
     }
     &__slider-wrapper {
-        padding: 6rem 0;
+        padding: 4rem 0;
     }
     &__slide {
         max-width: 17.5rem;
@@ -60,7 +60,7 @@
         width: 100%;
         @include flex-center();
         gap: 1rem;
-        padding: 2rem;
+        padding: 0 2rem;
     }
     &__nav-icon {
         cursor: pointer;
