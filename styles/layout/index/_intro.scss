@@ -65,7 +65,7 @@
 	}
 	&__video-wrapper {
 		cursor: pointer;
-		@include card-effect(17rem, auto, 0.25rem, none);
+		@include card-effect(17rem, auto, 0.25rem, 0.5rem);
 		min-height: fit-content;
 	}
 	&__video {
@@ -76,8 +76,8 @@
 		object-fit: cover;
 		&-desc {
 			pointer-events: none;
-			font-size: $size-13px;
-			line-height: $size-13px;
+			font-size: $size-15px;
+			line-height: $size-15px;
 			font-weight: $fw-550;
 			color: $color-020109;
 			display: flex;
