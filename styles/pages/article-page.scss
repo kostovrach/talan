@@ -1,0 +1,37 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+@import "../utils/swiper";
+
+@import "../base/reset";
+@import "../base/typography";
+
+@import "../components/header";
+@import "../components/footer";
+@import "../components/screen-blur";
+
+@import "../layout/article/article";
+@import "../layout/article/hint";
+
+@media (max-width: 1024px) {
+    .article {
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .hint {
+        &__body {
+            &-container {
+                width: 100%;
+                translate: 0 0;
+            }
+        }
+    }
+}
+@media (max-width: 540px) {
+    .hint {
+        &__image-wrapper {
+            display: none;
+        }
+    }
+}
