@@ -2829,6 +2829,9 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .intro {
+    min-height: fit-content;
+  }
   .intro__titlebox {
     flex-direction: column;
     align-items: flex-start;
@@ -2839,7 +2842,7 @@ body {
     flex-direction: column-reverse;
     align-items: flex-start;
     gap: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 12rem;
   }
   .intro__videobox {
     align-self: flex-end;

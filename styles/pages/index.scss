@@ -35,6 +35,8 @@
 }
 @media (max-width: 768px) {
 	.intro {
+		//height: fit-content;
+		min-height: fit-content;
 		&__titlebox {
 			flex-direction: column;
 			align-items: flex-start;
@@ -45,7 +47,7 @@
 			flex-direction: column-reverse;
 			align-items: flex-start;
 			gap: 4rem;
-			margin-bottom: 4rem;
+			margin-bottom: 12rem;
 		}
 		&__videobox {
 			align-self: flex-end;
