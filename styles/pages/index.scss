@@ -35,6 +35,7 @@
 }
 @media (max-width: 768px) {
 	.intro {
+		height: fit-content;
 		&__container {
 			display: flex;
 			flex-direction: column;

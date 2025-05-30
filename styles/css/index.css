@@ -2829,6 +2829,9 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .intro {
+    height: fit-content;
+  }
   .intro__container {
     display: flex;
     flex-direction: column;
