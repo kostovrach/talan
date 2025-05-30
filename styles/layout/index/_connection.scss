@@ -3,6 +3,7 @@
 .connection {
 	position: relative;
 	padding: 10rem 0;
+	overflow-x: clip;
 	&__container {
 		@include content-width();
 	}
