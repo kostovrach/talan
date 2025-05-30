@@ -41,8 +41,8 @@
     }
     &__nav {
         color: $color-D6D0C6;
+        width: fit-content;
         &-item {
-            width: fit-content;
             list-style: disc inside;
             transition: $duration;
             &:hover {

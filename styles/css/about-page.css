@@ -1833,6 +1833,7 @@ body {
 .docs__slide {
   max-width: 17.5rem;
   aspect-ratio: 1/1;
+  min-height: fit-content;
   padding: 2rem 1rem;
   border: 0.078125rem solid rgba(214, 208, 198, 0.5);
   border-left: none;
@@ -1848,12 +1849,9 @@ body {
 .docs__slide-wrapper {
   height: 100%;
   display: grid;
-  grid-template-rows: 40% 40% auto;
-  align-self: center;
-}
-.docs__slide-wrapper > * {
-  justify-self: center;
-  align-self: center;
+  grid-template-rows: 35% 35% auto;
+  align-items: center;
+  justify-items: center;
 }
 .docs__slide-title {
   text-wrap: wrap;

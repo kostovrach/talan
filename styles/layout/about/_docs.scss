@@ -11,6 +11,7 @@
     &__slide {
         max-width: 17.5rem;
         aspect-ratio: 1/1;
+        min-height: fit-content;
         padding: 2rem 1rem;
         border: $size-1-25px solid rgba($color-D6D0C6, 0.5);
         border-left: none;
@@ -25,12 +26,9 @@
         &-wrapper {
             height: 100%;
             display: grid;
-            grid-template-rows: 40% 40% auto;
-            align-self: center;
-            & > * {
-                justify-self: center;
-                align-self: center;
-            }
+            grid-template-rows: 35% 35% auto;
+            align-items: center;
+            justify-items: center;
         }
         &-title {
             text-wrap: wrap;
