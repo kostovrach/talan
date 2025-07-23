@@ -900,56 +900,64 @@ body {
   gap: 4rem;
   margin-top: 4rem;
 }
-.privacy__item {
+.privacy__body > div {
   counter-increment: item-counter;
   counter-reset: subitem-counter;
   padding-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.privacy__item-title {
+.privacy__body > div > h2 {
   font-size: clamp(1.5rem, 2vw, 2.5rem);
   line-height: clamp(1.5rem, 2vw, 2.5rem);
   text-transform: lowercase;
   font-weight: 750;
   text-transform: none;
   font-weight: 660;
-}
-.privacy__item-title::before {
-  content: counter(item-counter) ".";
-}
-.privacy__item, .privacy__subitem, .privacy__sub-subitem {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.privacy__item-title, .privacy__subitem-title, .privacy__sub-subitem-title {
   position: relative;
 }
-.privacy__item-title::before, .privacy__subitem-title::before, .privacy__sub-subitem-title::before {
+.privacy__body > div > h2::before {
+  content: counter(item-counter) ".";
   position: absolute;
   top: 0;
   left: -4rem;
 }
-.privacy__subitem, .privacy__sub-subtem {
-  color: #D6D0C6;
-  font-size: 0.875rem;
-}
-.privacy__subitem {
+.privacy__body > div > div {
   counter-increment: subitem-counter;
   counter-reset: sub-subitem-counter;
   margin-top: 2rem;
+  color: #D6D0C6;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.privacy__subitem-title {
+.privacy__body > div > div > h3 {
   font-size: 1.5rem;
+  position: relative;
 }
-.privacy__subitem-title::before {
+.privacy__body > div > div > h3::before {
   content: counter(item-counter) "." counter(subitem-counter);
+  position: absolute;
+  top: 0;
+  left: -4rem;
 }
-.privacy__sub-subitem {
+.privacy__body > div > div > div {
   counter-increment: sub-subitem-counter;
+  color: #D6D0C6;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.privacy__sub-subitem-title {
+.privacy__body > div > div > div > h4 {
   font-size: 1.5rem;
+  position: relative;
 }
-.privacy__sub-subitem-title::before {
+.privacy__body > div > div > div > h4::before {
   content: counter(item-counter) "." counter(subitem-counter) "." counter(sub-subitem-counter);
+  position: absolute;
+  top: 0;
+  left: -4rem;
 }
