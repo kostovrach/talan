@@ -1,30 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-	const filterItems = document.querySelectorAll(".cases__filter-item");
-	const caseItems = document.querySelectorAll(".cases__item");
+document.addEventListener('DOMContentLoaded', () => {
+  const tags = document.querySelectorAll('.cases__filter-item');
+  const items = document.querySelectorAll('.cases__item');
 
-	const defaultType = "administrative";
+  tags.forEach(tag => {
+    tag.addEventListener('click', () => {
+      tags.forEach(t => t.classList.remove('active'));
+      tag.classList.add('active');
 
-	filterItems.forEach((f) => {
-		const type = f.getAttribute("data-type");
-		f.classList.toggle("active", type === defaultType);
-	});
+      const filterType = tag.getAttribute('data-type');
 
-	caseItems.forEach((item) => {
-		const types = item.getAttribute("data-type").split(" ");
-		item.style.display = types.includes(defaultType) ? "" : "none";
-	});
+      items.forEach(item => {
+        const itemType = item.getAttribute('data-type').split(" ");
 
-	filterItems.forEach((filter) => {
-		filter.addEventListener("click", () => {
-			const selectedType = filter.getAttribute("data-type");
-
-			filterItems.forEach((f) => f.classList.remove("active"));
-			filter.classList.add("active");
-
-			caseItems.forEach((item) => {
-				const itemTypes = item.getAttribute("data-type").split(" ");
-				item.style.display = itemTypes.includes(selectedType) ? "" : "none";
-			});
-		});
-	});
+        if (filterType === 'all' || itemType.includes(filterType)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
 });

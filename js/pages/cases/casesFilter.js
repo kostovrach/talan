@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const filterType = tag.getAttribute('data-type');
 
       items.forEach(item => {
-        const itemType = item.getAttribute('data-type');
+        const itemType = item.getAttribute('data-type').split(" ");
 
-        if (filterType === 'all' || filterType === itemType) {
+        if (filterType === 'all' || itemType.includes(filterType)) {
           item.style.display = '';
         } else {
           item.style.display = 'none';

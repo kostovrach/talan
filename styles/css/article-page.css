@@ -1043,6 +1043,7 @@ body {
   pointer-events: auto;
 }
 .modal-form.open::backdrop {
+  backdrop-filter: blur(5px);
   opacity: 1;
 }
 .modal-form.closing {
@@ -1101,13 +1102,83 @@ body {
   resize: none;
   height: 8rem;
 }
-.modal-form__footnote {
+.modal-form__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.modal-form__agreement {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.modal-form__agreement-checkbox {
+  cursor: pointer;
+  position: relative;
+  width: 1.125rem;
+  height: 1.125rem;
+  aspect-ratio: 1/1;
+  border: 0.078125rem solid #FFFFFF;
+}
+.modal-form__agreement-checkbox > input[type=checkbox] {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.modal-form__agreement-checkbox::before, .modal-form__agreement-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 0.75rem;
+  height: 0.09375rem;
+  opacity: 0;
+  transition: all 0.35s;
+  pointer-events: none;
+}
+@media (pointer: fine) {
+  .modal-form__agreement-checkbox:hover::before, .modal-form__agreement-checkbox:hover::after {
+    background-color: #FFFFFF;
+    opacity: 1;
+  }
+  .modal-form__agreement-checkbox:hover::before {
+    rotate: 90deg;
+  }
+}
+.modal-form__agreement-checkbox:has(input:checked) {
+  border-color: #FFFFFF;
+  background-color: #FFFFFF;
+}
+.modal-form__agreement-checkbox:has(input:checked)::before, .modal-form__agreement-checkbox:has(input:checked)::after {
+  background-color: #020109;
+  opacity: 1;
+}
+.modal-form__agreement-checkbox:has(input:checked)::before {
+  left: 60%;
+  width: 0.5rem;
+  rotate: 135deg;
+}
+.modal-form__agreement-checkbox:has(input:checked)::after {
+  left: 30%;
+  top: 60%;
+  width: 0.35rem;
+  rotate: -135deg;
+}
+.modal-form__agreement-label {
   text-wrap: wrap;
   font-size: 0.75rem;
   line-height: 1rem;
   opacity: 0.25;
 }
-.modal-form__footnote-link {
+.modal-form__agreement-link {
+  width: 100%;
   text-decoration: underline;
 }
 .modal-form__button {
@@ -1646,15 +1717,33 @@ section.article aside > div > a > i {
   rotate: -135deg;
 }
 section.article aside > div > nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
   color: #D6D0C6;
   width: fit-content;
 }
-section.article aside > div > nav > li {
-  list-style: disc inside;
-  transition: 0.7s;
+section.article aside > div > nav > a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.7s;
 }
-section.article aside > div > nav > li:hover {
+section.article aside > div > nav > a::before {
+  content: "";
+  display: block;
+  width: 0.35rem;
+  height: 0.35rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #D6D0C6;
+  transition: background-color 0.7s;
+}
+section.article aside > div > nav > a:hover {
   color: #D8B38B;
+}
+section.article aside > div > nav > a:hover::before {
+  background-color: #D8B38B;
 }
 section.article aside > div > picture {
   display: flex;
@@ -1678,10 +1767,8 @@ section.article article > p {
   font-size: 1.125rem;
   font-weight: 660;
 }
-section.article article > div {
-  scroll-margin: 12rem;
-}
 section.article article > div > h2 {
+  scroll-margin: 6rem;
   font-size: 2rem;
   line-height: 2rem;
   font-weight: 550;

@@ -2,29 +2,29 @@
 	padding: 8rem 0;
 	&__container {
 		@include content-width();
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 	}
 	&__body {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
-        align-self: center;
+		align-self: center;
 	}
-    &__imagebox {
-        @include flex-center();
-    }
-    &__image-wrapper {
-        @include flex-center();
-        max-width: 31.25rem;
-        min-width: 21.875rem;
-        aspect-ratio: 1/1;
-    }
-    &__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover
-    }
+	&__imagebox {
+		@include flex-center();
+	}
+	&__image-wrapper {
+		@include flex-center();
+		max-width: 31.25rem;
+		min-width: 21.875rem;
+		aspect-ratio: 1/1;
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 	&__title {
 		@include fs-text(2vw, $size-40px, $size-24px);
 		text-transform: none;
@@ -34,7 +34,7 @@
 		font-size: $size-14px;
 	}
 	&__form {
-        text-wrap: wrap;
+		text-wrap: wrap;
 		max-width: 17.5rem;
 		display: flex;
 		flex-direction: column;
@@ -53,24 +53,95 @@
 				border-color: rgba($color-FFFFFF, 1);
 			}
 		}
-        &-button {
-            @include button($color-FFFFFF, $color-FFFFFF, none, none, inherit, $color-020109, $color-FFFFFF);
-            font-weight: $fw-750;
-            &--icon {
-                top: 0.1rem;
-                right: 0.1rem;
-            }
-            &:hover::after {
-                scale: 85;
-            }
-        }
-        &-privacy {
-            font-size: $size-12px;
-            color: $color-D6D0C6;
-            opacity: 0.5;
-            &--link {
-                text-decoration: underline;
-            }
-        }
+		&-button {
+			@include button($color-FFFFFF, $color-FFFFFF, none, none, inherit, $color-020109, $color-FFFFFF);
+			font-weight: $fw-750;
+			&--icon {
+				top: 0.1rem;
+				right: 0.1rem;
+			}
+			&:hover::after {
+				scale: 85;
+			}
+		}
+		&-agreement {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			&-checkbox {
+				cursor: pointer;
+				position: relative;
+				width: 1.125rem;
+				height: 1.125rem;
+				aspect-ratio: 1/1;
+				border: $size-1-25px solid $color-FFFFFF;
+				> input[type="checkbox"] {
+					cursor: pointer;
+					position: absolute;
+					z-index: 1;
+					inset: 0;
+					width: 100%;
+					height: 100%;
+					appearance: none;
+					-moz-appearance: none;
+					-webkit-appearance: none;
+				}
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					translate: -50% -50%;
+					width: 0.75rem;
+					height: $size-1-5px;
+					opacity: 0;
+					transition: all calc($duration / 2);
+					pointer-events: none;
+				}
+				@media (pointer: fine) {
+					&:hover {
+						&::before,
+						&::after {
+							background-color: $color-FFFFFF;
+							opacity: 1;
+						}
+						&::before {
+							rotate: 90deg;
+						}
+					}
+				}
+				&:has(input:checked) {
+					border-color: $color-FFFFFF;
+					background-color: $color-FFFFFF;
+					&::before,
+					&::after {
+						background-color: $color-020109;
+						opacity: 1;
+					}
+					&::before {
+						left: 60%;
+						width: 0.5rem;
+						rotate: 135deg;
+					}
+					&::after {
+						left: 30%;
+						top: 60%;
+						width: 0.35rem;
+						rotate: -135deg;
+					}
+				}
+			}
+			&-label {
+				text-wrap: wrap;
+				font-size: $size-12px;
+				line-height: $size-16px;
+				opacity: 0.25;
+			}
+			&-link {
+				width: 100%;
+				text-decoration: underline;
+			}
+		}
 	}
 }

@@ -1,6 +1,7 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 @import "../utils/swiper";
+@import "../utils/fancybox";
 
 @import "../base/reset";
 @import "../base/typography";
@@ -42,8 +43,7 @@
 				}
 			}
 		}
-		&__item,
-		&__item--first-of-type {
+		&__item {
 			flex-direction: column;
 			margin: 8rem 0;
 			& > * {

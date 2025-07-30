@@ -39,13 +39,31 @@ section.article {
 				}
 			}
 			> nav {
+				display: flex;
+				flex-direction: column;
+				gap: 0.25rem;
 				color: $color-D6D0C6;
 				width: fit-content;
-				> li {
-					list-style: disc inside;
-					transition: $duration;
+				> a {
+					display: flex;
+					align-items: center;
+					gap: 0.5rem;
+					transition: color $duration;
+					&::before {
+						content: "";
+						display: block;
+						width: 0.35rem;
+						height: 0.35rem;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						background-color: $color-D6D0C6;
+						transition: background-color $duration;
+					}
 					&:hover {
 						color: $color-D8B38B;
+						&::before {
+							background-color: $color-D8B38B;
+						}
 					}
 				}
 			}
@@ -71,8 +89,8 @@ section.article {
 			font-weight: $fw-660;
 		}
 		> div {
-			scroll-margin: 12rem;
 			> h2 {
+				scroll-margin: 6rem;
 				font-size: $size-32px;
 				line-height: $size-32px;
 				font-weight: $fw-550;

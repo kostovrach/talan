@@ -146,13 +146,13 @@
 		<dialog id="modal-form" class="modal-form">
 			<div class="modal-form__container">
 				<div class="modal-form__closeBtn icon-cross" tabindex="0" role="button"></div>
-				<from class="modal-form__form">
+				<from class="modal-form__form" action="" method="post">
 					<div class="modal-form__title" role="heading">Расскажите нам о&nbsp;своей проблеме</div>
 					<div class="modal-form__inputbox">
-						<input class="modal-form__input" type="text" placeholder="Ваше имя" />
-						<input class="modal-form__input" type="tel" required data-type="input-tel" placeholder="Номер телефона" />
+						<input id="form-name" class="modal-form__input" type="text" placeholder="Ваше имя" />
+						<input id="form-tel" class="modal-form__input" type="tel" required data-type="input-tel" placeholder="Номер телефона" />
 						<div class="modal-form__select select" tabindex="0" role="combobox">
-							<input id="input-service" class="modal-form__input modal-form__select-input select__input" type="text" placeholder="Услуга (опционально)" tabindex="-1" readonly />
+							<input id="form-service" class="modal-form__input modal-form__select-input select__input" type="text" placeholder="Услуга (опционально)" tabindex="-1" readonly />
 							<i class="modal-form__select-icon select__icon icon-check-mark"></i>
 							<ul class="modal-form__select-dropdown select__dropdown" role="listbox">
 								<li class="modal-form__select-item select__item" role="option" tabindex="0">Административное право</li>
@@ -167,10 +167,28 @@
 								<li class="modal-form__select-item select__item" role="option" tabindex="0">Другое...</li>
 							</ul>
 						</div>
-						<textarea class="modal-form__input modal-form__input--custom" placeholder="Опишите задачу (не обязательно)"></textarea>
+						<textarea id="form-question" class="modal-form__input modal-form__input--custom" placeholder="Опишите задачу (не обязательно)"></textarea>
 					</div>
-					<div>
-						<p class="modal-form__footnote">Отправляя запрос, вы соглашаетесь с <a class="modal-form__footnote-link" href="privacy-policy.html">политикой конфиденциальности</a></p>
+					<div class="modal-form__footer">
+						<div class="modal-form__agreement">
+							<div class="modal-form__agreement-checkbox">
+								<input type="checkbox" id="form-agreement" name="agreement" required />
+							</div>
+							<label class="modal-form__agreement-label" for="form-agreement"
+								>Согласен
+								<a class="modal-form__agreement-link" href="privacy-policy.html" target="_blank">с&nbsp;обработкой персональных данных</a>
+								<a class="modal-form__agreement-link" href="privacy-policy.html" target="_blank">и&nbsp;политикой конфиденциальности</a>
+							</label>
+						</div>
+						<div class="modal-form__agreement">
+							<div class="modal-form__agreement-checkbox">
+								<input type="checkbox" id="form-mailing" name="mailing" />
+							</div>
+							<label class="modal-form__agreement-label" for="form-mailing"
+								>Согласен получать рекламную рассылку в соответствии
+								<a class="modal-form__agreement-link" href="privacy-policy.html" target="_blank">с&nbsp;политикой</a>
+							</label>
+						</div>
 						<button class="modal-form__button" type="submit">Отправить запрос<i class="modal-form__button--icon icon-arrow"></i></button>
 					</div>
 				</from>
@@ -293,7 +311,27 @@
 								<textarea id="input-comment" class="connection__input connection__input--custom" placeholder="Опишите задачу (не обязательно)"></textarea>
 							</div>
 						</div>
-						<p class="connection__footnote">Отправляя запрос, вы соглашаетесь с <a class="connection__footnote-link" target="_blank" href="privacy-policy.html">политикой конфиденциальности</a></p>
+						<div class="connection__agreement-container">
+							<div class="connection__agreement">
+								<div class="connection__agreement-checkbox">
+									<input type="checkbox" id="connection-agreement" name="agreement" required />
+								</div>
+								<label class="connection__agreement-label" for="connection-agreement"
+									>Согласен
+									<a class="connection__agreement-link" href="privacy-policy.html" target="_blank">с&nbsp;обработкой персональных данных</a>
+									<a class="connection__agreement-link" href="privacy-policy.html" target="_blank">и&nbsp;политикой конфиденциальности</a>
+								</label>
+							</div>
+							<div class="connection__agreement">
+								<div class="connection__agreement-checkbox">
+									<input type="checkbox" id="connection-mailing" name="mailing" />
+								</div>
+								<label class="connection__agreement-label" for="connection-mailing"
+									>Согласен получать рекламную рассылку в соответствии
+									<a class="connection__agreement-link" href="privacy-policy.html" target="_blank">с&nbsp;политикой</a>
+								</label>
+							</div>
+						</div>
 						<button class="connection__button" type="submit">Отправить запрос<i class="connection__button--icon icon-arrow"></i></button>
 					</form>
 				</div>

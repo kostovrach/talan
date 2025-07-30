@@ -85,18 +85,9 @@
 	&__item {
 		mix-blend-mode: difference;
 		display: flex;
-        flex-wrap: wrap;
+		flex-wrap: wrap;
 		gap: 2rem;
 		margin: 8rem 0;
-		&--first-of-type {
-			mix-blend-mode: difference;
-			display: flex;
-			justify-content: center;
-			gap: 2rem;
-			& > * {
-				width: 30%;
-			}
-		}
 		&:nth-child(odd) {
 			justify-content: flex-end;
 		}
@@ -106,24 +97,32 @@
 		& > * {
 			width: 40%;
 		}
-		&-tag {
+		> h3 {
 			text-transform: uppercase;
 			font-size: $size-14px;
 			font-weight: $fw-750;
 		}
-		&-text {
-			font-size: $size-14px;
-            margin-top: 1rem;
-            &--marked {
-                list-style: disc outside;
-                margin-left: 1rem;
-            }
-			&--title {
-				width: 80%;
-				font-size: $size-40px;
-				line-height: $size-40px;
-				font-weight: $fw-660;
-                margin-bottom: 2rem;
+		> ul,
+		ol {
+			li {
+				font-size: $size-14px;
+				margin-top: 1rem;
+				list-style: none;
+				&:first-child {
+					width: 80%;
+					font-size: $size-40px;
+					line-height: $size-40px;
+					font-weight: $fw-660;
+					margin-bottom: 2rem;
+				}
+			}
+		}
+		> ul {
+			li {
+				&:not(:first-child) {
+					list-style: disc outside;
+					margin-left: 1rem;
+				}
 			}
 		}
 	}
@@ -143,7 +142,7 @@
 				width: 100%;
 			}
 			@for $i from 1 through 5 {
-				&:nth-child(#{$i}) {
+				&:nth-child(5n + #{$i}) {
 					grid-column-start: #{$i};
 				}
 			}
@@ -171,7 +170,7 @@
 		}
 		&-image-wrapper {
 			@include card-effect(auto, auto, 0.5rem, 2rem);
-            max-width: 34.375rem;
+			max-width: 34.375rem;
 			rotate: 2deg;
 		}
 		&-image {

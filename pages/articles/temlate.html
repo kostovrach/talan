@@ -146,13 +146,13 @@
 		<dialog id="modal-form" class="modal-form">
 			<div class="modal-form__container">
 				<div class="modal-form__closeBtn icon-cross" tabindex="0" role="button"></div>
-				<from class="modal-form__form">
+				<from class="modal-form__form" action="" method="post">
 					<div class="modal-form__title" role="heading">Расскажите нам о&nbsp;своей проблеме</div>
 					<div class="modal-form__inputbox">
-						<input class="modal-form__input" type="text" placeholder="Ваше имя" />
-						<input class="modal-form__input" type="tel" required data-type="input-tel" placeholder="Номер телефона" />
+						<input id="form-name" class="modal-form__input" type="text" placeholder="Ваше имя" />
+						<input id="form-tel" class="modal-form__input" type="tel" required data-type="input-tel" placeholder="Номер телефона" />
 						<div class="modal-form__select select" tabindex="0" role="combobox">
-							<input id="input-service" class="modal-form__input modal-form__select-input select__input" type="text" placeholder="Услуга (опционально)" tabindex="-1" readonly />
+							<input id="form-service" class="modal-form__input modal-form__select-input select__input" type="text" placeholder="Услуга (опционально)" tabindex="-1" readonly />
 							<i class="modal-form__select-icon select__icon icon-check-mark"></i>
 							<ul class="modal-form__select-dropdown select__dropdown" role="listbox">
 								<li class="modal-form__select-item select__item" role="option" tabindex="0">Административное право</li>
@@ -167,10 +167,28 @@
 								<li class="modal-form__select-item select__item" role="option" tabindex="0">Другое...</li>
 							</ul>
 						</div>
-						<textarea class="modal-form__input modal-form__input--custom" placeholder="Опишите задачу (не обязательно)"></textarea>
+						<textarea id="form-question" class="modal-form__input modal-form__input--custom" placeholder="Опишите задачу (не обязательно)"></textarea>
 					</div>
-					<div>
-						<p class="modal-form__footnote">Отправляя запрос, вы соглашаетесь с <a class="modal-form__footnote-link" href="../privacy-policy.html">политикой конфиденциальности</a></p>
+					<div class="modal-form__footer">
+						<div class="modal-form__agreement">
+							<div class="modal-form__agreement-checkbox">
+								<input type="checkbox" id="form-agreement" name="agreement" required />
+							</div>
+							<label class="modal-form__agreement-label" for="form-agreement"
+								>Согласен
+								<a class="modal-form__agreement-link" href="privacy-policy.html" target="_blank">с&nbsp;обработкой персональных данных</a>
+								<a class="modal-form__agreement-link" href="privacy-policy.html" target="_blank">и&nbsp;политикой конфиденциальности</a>
+							</label>
+						</div>
+						<div class="modal-form__agreement">
+							<div class="modal-form__agreement-checkbox">
+								<input type="checkbox" id="form-mailing" name="mailing" />
+							</div>
+							<label class="modal-form__agreement-label" for="form-mailing"
+								>Согласен получать рекламную рассылку в соответствии
+								<a class="modal-form__agreement-link" href="privacy-policy.html" target="_blank">с&nbsp;политикой</a>
+							</label>
+						</div>
 						<button class="modal-form__button" type="submit">Отправить запрос<i class="modal-form__button--icon icon-arrow"></i></button>
 					</div>
 				</from>
@@ -189,12 +207,12 @@
 				</ul>
 			</div>
 		</dialog>
-        <dialog id="popup-video" class="popup-video">
-            <div class="popup-video__container">
-                <div class="popup-video__closeBtn icon-cross"></div>
-                <video id="fullscreen-video" class="popup-video__video" controls></video>
-            </div>
-        </dialog>
+		<dialog id="popup-video" class="popup-video">
+			<div class="popup-video__container">
+				<div class="popup-video__closeBtn icon-cross"></div>
+				<video id="fullscreen-video" class="popup-video__video" controls></video>
+			</div>
+		</dialog>
 		<main>
 			<section class="article">
 				<div class="article__container">
@@ -202,88 +220,84 @@
 						<div>
 							<h1>Отмена судебного приказа в&nbsp;гражданском производстве</h1>
 							<a href="../news.html"><i class="article__link-back--icon icon-arrow"></i>Назад</a>
-							<nav>
-								<li><a href="#description">Описание ситуации</a></li>
-								<li><a href="#result">Результат</a></li>
-								<li><a href="#feedback">Отзыв клиента</a></li>
-							</nav>
-                            <picture>
-                                <img src="../../media/content/img/staff/team1.jpg" alt="#">
-                            </picture>
+							<nav></nav>
+							<picture>
+								<img src="../../media/content/img/staff/team1.jpg" alt="#" />
+							</picture>
 						</div>
 					</aside>
 					<article>
-                        <p>Популярность ведения бизнеса именно таким способом возрастает, как и объем недовольств и претензий потребителей, хотя способ реализации товаров, услуг и работ именно дистанционным способом, был всегда подконтролен Роспотребнадзору.</p>
-                        <div id="description">
-                            <h2>Описание ситуации</h2>
-                            <p>Предпринимательская деятельность регулируется различными нормативами правового характера. С 01.01.2019 года Закон РФ «О защите прав потребителей» (далее – «Закон») претерпел изменения и пополнился новым понятием – «владелец агрегатора информации о товарах (услугах, работах)» (далее – «владелец агрегатора»).</p>
-                            <p>Это любой бизнес, зарегистрированный в установленном законом порядке, осуществляющий коммерческую деятельность и владеющий web-сайтом, функционал которого мог одновременно предложить потенциальным покупателям следующие возможности:</p>
-                            <ul>
-                                <li>ознакомить и предложить заключить с компанией реализатором какой-либо Договор (купли-продажи, оказания услуг, выполнения работ);</li>
-                                <li>заключить соответствующий Договор;</li>
-                                <li>оплатить покупку, но непосредственно владельцу агрегатора, применяя безналичную форму расчета.</li>
-                            </ul>
-                            <p>То есть, ключевым элементом, когда владелец web-сайта может быть отнесен к агрегатору, является наличие 3 вышеуказанных функций. Только в этом случае можно будет говорить о применении этих нововведений.</p>
-                            <p>В иных обстоятельствах, правоотношения сторон будут квалифицироваться, а равно разрешаться в обычном порядке, руководствуясь главами 1, 2 и 3 Закона РФ «О защите прав потребителей», в посредством судебного органа, самостоятельно, или используя услугу представительства в суде.</p>
-                            <picture>
-                                <img src="../../media/content/img/cases/image3.jpg" alt="#">
-                            </picture>
-                        </div>
-                        <div id="result">
-                            <h2>Результат</h2>
-                            <p>Рынок таких сервисов разнообразен, но, несмотря на разные названия (основные представлены ниже), суть этих площадок идентична, но с различным предназначением, а именно:</p>
-                            <p>marketplace (маркетплейс) является платформой для электронной коммерции, где бизнес размещает информацию о своей продукции (услугах, работе);</p>
-                            <p>Эти площадки могут и не осуществлять действия по приему оплаты в пользу третьих лиц, но при наличии данной функции, они сразу же будут подпадать под действия законодательства «об агрегаторах».</p>
-                            <div class="article__values">
-                                <ul>
-                                    <li>1 500 000 &#8381;</li>
-                                    <li>Списанный долг</li>
-                                </ul>
-                                <ul>
-                                    <li>7 месяцев</li>
-                                    <li>Продолжительность судебного разбирательства</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div id="feedback">
-                            <h2>Отзыв клиента</h2>
-                            <div class="article__chapter-video-wrapper">
-                                <video class="article__chapter-video">
-                                    <source src="../../media/content/video/confused-travolta.mp4" type="video/mp4">
-                                </video>
-                                <i class="article__chapter-video-control icon-play"></i>
-                            </div>
-                            <p>Спасибо за очень подробную и тщательную проверку. Это было не только полезно для принятия решения о покупке дома, но и содержит много полезной информации, которая сделает меня лучшим домовладельцем. Теперь я знаю, как и где обслуживать ключевые компоненты нашего нового дома, чтобы поддерживать его в отличном рабочем состоянии, еще раз спасибо.</p>
-                            <ol>
-                                <li>Бильбо Беггинс</li>
-                                <li>Главный бухгалтер в ОАО «ТрансНефть»</li>
-                            </ol>
-                        </div>
-                    </article>
+						<p>Популярность ведения бизнеса именно таким способом возрастает, как и объем недовольств и претензий потребителей, хотя способ реализации товаров, услуг и работ именно дистанционным способом, был всегда подконтролен Роспотребнадзору.</p>
+						<div>
+							<h2>Описание ситуации</h2>
+							<p>Предпринимательская деятельность регулируется различными нормативами правового характера. С 01.01.2019 года Закон РФ «О защите прав потребителей» (далее – «Закон») претерпел изменения и пополнился новым понятием – «владелец агрегатора информации о товарах (услугах, работах)» (далее – «владелец агрегатора»).</p>
+							<p>Это любой бизнес, зарегистрированный в установленном законом порядке, осуществляющий коммерческую деятельность и владеющий web-сайтом, функционал которого мог одновременно предложить потенциальным покупателям следующие возможности:</p>
+							<ul>
+								<li>ознакомить и предложить заключить с компанией реализатором какой-либо Договор (купли-продажи, оказания услуг, выполнения работ);</li>
+								<li>заключить соответствующий Договор;</li>
+								<li>оплатить покупку, но непосредственно владельцу агрегатора, применяя безналичную форму расчета.</li>
+							</ul>
+							<p>То есть, ключевым элементом, когда владелец web-сайта может быть отнесен к агрегатору, является наличие 3 вышеуказанных функций. Только в этом случае можно будет говорить о применении этих нововведений.</p>
+							<p>В иных обстоятельствах, правоотношения сторон будут квалифицироваться, а равно разрешаться в обычном порядке, руководствуясь главами 1, 2 и 3 Закона РФ «О защите прав потребителей», в посредством судебного органа, самостоятельно, или используя услугу представительства в суде.</p>
+							<picture>
+								<img src="../../media/content/img/cases/image3.jpg" alt="#" />
+							</picture>
+						</div>
+						<div>
+							<h2>Результат</h2>
+							<p>Рынок таких сервисов разнообразен, но, несмотря на разные названия (основные представлены ниже), суть этих площадок идентична, но с различным предназначением, а именно:</p>
+							<p>marketplace (маркетплейс) является платформой для электронной коммерции, где бизнес размещает информацию о своей продукции (услугах, работе);</p>
+							<p>Эти площадки могут и не осуществлять действия по приему оплаты в пользу третьих лиц, но при наличии данной функции, они сразу же будут подпадать под действия законодательства «об агрегаторах».</p>
+							<div class="article__values">
+								<ul>
+									<li>1 500 000 &#8381;</li>
+									<li>Списанный долг</li>
+								</ul>
+								<ul>
+									<li>7 месяцев</li>
+									<li>Продолжительность судебного разбирательства</li>
+								</ul>
+							</div>
+						</div>
+						<div>
+							<h2>Отзыв клиента</h2>
+							<div class="article__chapter-video-wrapper">
+								<video class="article__chapter-video">
+									<source src="../../media/content/video/confused-travolta.mp4" type="video/mp4" />
+								</video>
+								<i class="article__chapter-video-control icon-play"></i>
+							</div>
+							<p>Спасибо за очень подробную и тщательную проверку. Это было не только полезно для принятия решения о покупке дома, но и содержит много полезной информации, которая сделает меня лучшим домовладельцем. Теперь я знаю, как и где обслуживать ключевые компоненты нашего нового дома, чтобы поддерживать его в отличном рабочем состоянии, еще раз спасибо.</p>
+							<ol>
+								<li>Бильбо Беггинс</li>
+								<li>Главный бухгалтер в ОАО «ТрансНефть»</li>
+							</ol>
+						</div>
+					</article>
 				</div>
 				<div class="article__fog">
 					<div class="article__fog-layer article__fog-layer--1"></div>
 					<div class="article__fog-layer article__fog-layer--2"></div>
 				</div>
 			</section>
-            <section class="hint">
-                <div class="hint__container">
-                    <p class="hint__title">Следующая<br>статья</p>
-                    <div class="hint__body">
-                        <div class="hint__body-container">
-                            <picture class="hint__image-wrapper">
-                                <img class="hint__image" src="../../media/content/img/cases/image18.jpg" alt="#">
-                            </picture>
-                            <div class="hint__content">
-                                <div class="hint__content-tag">Событие</div>
-                                <p class="hint__content-title">Отказ от тура в условиях коронавируса COVID-19</p>
-                                <p class="hint__content-subtitle">Бюро TALAN провело детальный аудит налоговых расходов компании и разработало стратегию оптимизации, позволив снизить налоговую нагрузку на 30%. Благодаря оперативным и грамотным решениям клиент смог существенно повысить финансовую стабильность и сосредоточиться на развитии бизнеса.</p>
-                                <a class="hint__content-link" href="temlate.html">Читать статью<i class="hint__content-link--icon icon-arrow"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+			<section class="hint">
+				<div class="hint__container">
+					<p class="hint__title">Следующая<br />статья</p>
+					<div class="hint__body">
+						<div class="hint__body-container">
+							<picture class="hint__image-wrapper">
+								<img class="hint__image" src="../../media/content/img/cases/image18.jpg" alt="#" />
+							</picture>
+							<div class="hint__content">
+								<div class="hint__content-tag">Событие</div>
+								<p class="hint__content-title">Отказ от тура в условиях коронавируса COVID-19</p>
+								<p class="hint__content-subtitle">Бюро TALAN провело детальный аудит налоговых расходов компании и разработало стратегию оптимизации, позволив снизить налоговую нагрузку на 30%. Благодаря оперативным и грамотным решениям клиент смог существенно повысить финансовую стабильность и сосредоточиться на развитии бизнеса.</p>
+								<a class="hint__content-link" href="temlate.html">Читать статью<i class="hint__content-link--icon icon-arrow"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -322,10 +336,11 @@
 				</div>
 			</div>
 		</footer>
+		<script src="../../js/pages/artcile/navigation.js"></script>
 		<script src="../../js/components/numberMask.js"></script>
 		<script src="../../js/components/modals.js"></script>
 		<script src="../../js/components/select.js"></script>
-		<script src="../../js/components/navigation.js"></script>
 		<script src="../../js/components/fullscreen-video.js"></script>
+		<script src="../../js/components/navigation.js"></script>
 	</body>
 </html>
